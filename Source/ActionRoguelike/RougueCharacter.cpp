@@ -7,6 +7,7 @@
 #include "EnhancedInputComponent.h"
 #include "InputAction.h"
 #include "InputActionValue.h"
+#include "Projectiles/RogueProjectileMagic.h"
 #include "GameFramework/SpringArmComponent.h"
 
 // Sets default values
@@ -23,6 +24,7 @@ ARougueCharacter::ARougueCharacter()
 	CameraComp->SetupAttachment(SpringArmComp);
 	
 
+	MuzzleSocketName = FName("Muzzle_01");
 }
 
 // Called when the game starts or when spawned
@@ -56,6 +58,17 @@ void ARougueCharacter::Look(const FInputActionInstance& InValue)
 	AddControllerYawInput(InputValue.X);
 }
 
+void ARougueCharacter::PrimaryAttack()
+{
+	FVector SpawnLocation = GetMesh()->GetSocketLocation(MuzzleSocketName);
+	FRotator SpawnRotation = GetControlRotation();
+	FActorSpawnParameters SpawnParameters;
+	SpawnParameters.Instigator = this;
+	SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+	
+	GetWorld()->SpawnActor<AActor>(ProjectileClass,SpawnLocation, SpawnRotation, SpawnParameters);	
+}
+
 // Called every frame
 void ARougueCharacter::Tick(float DeltaTime)
 {
@@ -72,5 +85,6 @@ void ARougueCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	
 	EnhancedInput->BindAction(Input_Move, ETriggerEvent::Triggered, this, &ARougueCharacter::Move);
 	EnhancedInput->BindAction(Input_Look, ETriggerEvent::Triggered, this, &ARougueCharacter::Look);
+	EnhancedInput->BindAction(Input_PrimaryAttack, ETriggerEvent::Triggered, this, &ARougueCharacter::PrimaryAttack);
 }
 

@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "RougueCharacter.generated.h"
 
+class ARogueProjectileMagic;
 class UInputComponent;
 class USpringArmComponent;
 class UCameraComponent;
@@ -13,7 +14,7 @@ class UInputAction;
 struct FInputActionValue;
 struct FInputActionInstance;
 
-UCLASS()
+UCLASS(Abstract)
 class ACTIONROGUELIKE_API ARougueCharacter : public ACharacter
 {
 	GENERATED_BODY()
@@ -23,11 +24,21 @@ public:
 	ARougueCharacter();
 
 protected:
+	
+	UPROPERTY(VisibleAnywhere, Category="Primary Attack")
+	FName MuzzleSocketName;
+	
+	UPROPERTY(EditDefaultsOnly, Category="Primary Attack")
+	TSubclassOf<ARogueProjectileMagic> ProjectileClass;
+	
 	UPROPERTY(EditDefaultsOnly, Category="Input")
 	TObjectPtr<UInputAction> Input_Move;
 	
 	UPROPERTY(EditDefaultsOnly, Category="Input")
 	TObjectPtr<UInputAction> Input_Look;
+	
+	UPROPERTY(EditDefaultsOnly, Category="Input")
+	TObjectPtr<UInputAction> Input_PrimaryAttack;
 	
 	UPROPERTY(VisibleAnywhere, Category="Components")
 	TObjectPtr<UCameraComponent> CameraComp;
@@ -39,6 +50,7 @@ protected:
 	
 	void Move(const FInputActionValue& InValue);
 	void Look(const FInputActionInstance& InValue);
+	void PrimaryAttack();
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
