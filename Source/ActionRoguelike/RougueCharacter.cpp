@@ -7,7 +7,9 @@
 #include "EnhancedInputComponent.h"
 #include "InputAction.h"
 #include "InputActionValue.h"
+#include "NiagaraFunctionLibrary.h"
 #include "Projectiles/RogueProjectileMagic.h"
+#include "Kismet/GameplayStatics.h"
 #include "GameFramework/SpringArmComponent.h"
 
 // Sets default values
@@ -60,13 +62,36 @@ void ARougueCharacter::Look(const FInputActionInstance& InValue)
 
 void ARougueCharacter::PrimaryAttack()
 {
+	
+	
+	PlayAnimMontage(AttackMontage);
+	
+	FTimerHandle AttackTimerHandle;
+	const float AttackDelayTime = 0.2f;
+	GetWorldTimerManager().SetTimer(AttackTimerHandle, this, &ARougueCharacter::AttackTimerElapsed, AttackDelayTime);
+	
+	UNiagaraFunctionLibrary::SpawnSystemAttached(CastingEffect, GetMesh(), MuzzleSocketName, FVector::ZeroVector,
+		FRotator::ZeroRotator, EAttachLocation::Type::SnapToTarget, true);
+	
+	UGameplayStatics::PlaySound2D(this, CastingSound);
+
+}
+
+void ARougueCharacter::AttackTimerElapsed()
+{
 	FVector SpawnLocation = GetMesh()->GetSocketLocation(MuzzleSocketName);
 	FRotator SpawnRotation = GetControlRotation();
 	FActorSpawnParameters SpawnParameters;
 	SpawnParameters.Instigator = this;
 	SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-	
-	GetWorld()->SpawnActor<AActor>(ProjectileClass,SpawnLocation, SpawnRotation, SpawnParameters);	
+	AActor* NewProjectile = GetWorld()->SpawnActor<AActor>(ProjectileClass,SpawnLocation, SpawnRotation, SpawnParameters);	
+
+	MoveIgnoreActorAdd(NewProjectile);
+}
+
+void ARougueCharacter::Jump()
+{
+	Super::Jump();
 }
 
 // Called every frame
@@ -86,5 +111,6 @@ void ARougueCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	EnhancedInput->BindAction(Input_Move, ETriggerEvent::Triggered, this, &ARougueCharacter::Move);
 	EnhancedInput->BindAction(Input_Look, ETriggerEvent::Triggered, this, &ARougueCharacter::Look);
 	EnhancedInput->BindAction(Input_PrimaryAttack, ETriggerEvent::Triggered, this, &ARougueCharacter::PrimaryAttack);
+	EnhancedInput->BindAction(Input_Jump, ETriggerEvent::Triggered, this, &ARougueCharacter::Jump);
 }
 

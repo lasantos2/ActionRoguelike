@@ -11,6 +11,9 @@ class UInputComponent;
 class USpringArmComponent;
 class UCameraComponent;
 class UInputAction;
+class UAnimMontage;
+class USoundBase;
+class UNiagaraSystem;
 struct FInputActionValue;
 struct FInputActionInstance;
 
@@ -25,10 +28,19 @@ public:
 
 protected:
 	
-	UPROPERTY(VisibleAnywhere, Category="Primary Attack")
+	UPROPERTY(VisibleAnywhere, Category="PrimaryAttack")
 	FName MuzzleSocketName;
 	
-	UPROPERTY(EditDefaultsOnly, Category="Primary Attack")
+	UPROPERTY(EditDefaultsOnly, Category="PrimaryAttack")
+	TObjectPtr<UNiagaraSystem> CastingEffect;
+	
+	UPROPERTY(EditDefaultsOnly, Category="PrimaryAttack")
+	TObjectPtr<USoundBase> CastingSound;
+	
+	UPROPERTY(EditDefaultsOnly, Category = "PrimaryAttack")
+	TObjectPtr<UAnimMontage> AttackMontage;
+	
+	UPROPERTY(EditDefaultsOnly, Category="PrimaryAttack")
 	TSubclassOf<ARogueProjectileMagic> ProjectileClass;
 	
 	UPROPERTY(EditDefaultsOnly, Category="Input")
@@ -36,6 +48,9 @@ protected:
 	
 	UPROPERTY(EditDefaultsOnly, Category="Input")
 	TObjectPtr<UInputAction> Input_Look;
+	
+	UPROPERTY(EditDefaultsOnly, Category="Input")
+	TObjectPtr<UInputAction> Input_Jump;
 	
 	UPROPERTY(EditDefaultsOnly, Category="Input")
 	TObjectPtr<UInputAction> Input_PrimaryAttack;
@@ -51,6 +66,8 @@ protected:
 	void Move(const FInputActionValue& InValue);
 	void Look(const FInputActionInstance& InValue);
 	void PrimaryAttack();
+	void AttackTimerElapsed();
+	void Jump();
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
