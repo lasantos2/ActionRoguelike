@@ -30,9 +30,33 @@ void URogueInteractionComponent::TickComponent(float DeltaTime, enum ELevelTick 
 	GetWorld()->OverlapMultiByChannel(Overlaps, Center, FQuat::Identity, CollisionChannel, Shape);
 	
 	DrawDebugSphere(GetWorld(), Center, InteractionRadius, 32, FColor::White);
+	
+	float HighestDotResult = -1.0;
+	AActor* BestActor = nullptr;	
+	
 	for (FOverlapResult& Overlap : Overlaps)
 	{
-		DrawDebugBox(GetWorld(), Overlap.GetActor()->GetActorLocation(), FVector(50.0f), FColor::Red);
+		FVector OverlapLocation = Overlap.GetActor()->GetActorLocation();
 		
+		DrawDebugBox(GetWorld(), OverlapLocation, FVector(50.0f), FColor::Red);
+		
+		FVector OverlapDirection = (OverlapLocation - Center).GetSafeNormal();
+		
+		float DotResult = FVector::DotProduct(OverlapDirection, PC->GetControlRotation().Vector());
+		
+		FString DebugString = FString::Printf(TEXT("DOT: %f"), DotResult);
+		
+		DrawDebugString(GetWorld(), OverlapLocation,  DebugString, nullptr, FColor::White, 0.0f, true);
+		
+		if (DotResult > HighestDotResult)
+		{
+			BestActor = Overlap.GetActor();
+			HighestDotResult = DotResult;
+		}
+	}
+	
+	if (BestActor)
+	{
+		DrawDebugBox(GetWorld(), BestActor->GetActorLocation(), FVector(60.0f), FColor::Green);
 	}
 }
