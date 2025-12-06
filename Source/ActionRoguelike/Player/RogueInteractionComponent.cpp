@@ -2,7 +2,9 @@
 
 
 #include "RogueInteractionComponent.h"
-#include "Math/UnrealMathUtility.h"
+
+#include "CollisionShape.h"
+#include "Engine/OverlapResult.h"
 
 URogueInteractionComponent::URogueInteractionComponent()
 {
@@ -18,5 +20,19 @@ void URogueInteractionComponent::TickComponent(float DeltaTime, enum ELevelTick 
 	
 	FVector Center = PC->GetPawn()->GetActorLocation();
 	
-	DrawDebugBox(GetWorld(), Center, FVector(20.f), FColor::Red);
+	ECollisionChannel CollisionChannel = ECollisionChannel::ECC_Visibility;
+	
+	FCollisionShape Shape;
+	
+	Shape.SetSphere(InteractionRadius);
+	
+	TArray<FOverlapResult> Overlaps;
+	GetWorld()->OverlapMultiByChannel(Overlaps, Center, FQuat::Identity, CollisionChannel, Shape);
+	
+	DrawDebugSphere(GetWorld(), Center, InteractionRadius, 32, FColor::White);
+	for (FOverlapResult& Overlap : Overlaps)
+	{
+		DrawDebugBox(GetWorld(), Overlap.GetActor()->GetActorLocation(), FVector(50.0f), FColor::Red);
+		
+	}
 }
