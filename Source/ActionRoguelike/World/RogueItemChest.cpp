@@ -13,19 +13,15 @@ ARogueItemChest::ARogueItemChest()
 	PrimaryActorTick.bStartWithTickEnabled = false;
 	
 	BaseMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BaseMeshComponent"));
+	BaseMeshComponent->SetCollisionProfileName("Interaction");
 	RootComponent = BaseMeshComponent;
 	
 	LidMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("LidMeshComponent"));
+	LidMeshComponent->SetCollisionProfileName("NoCollision");
 	LidMeshComponent->SetupAttachment(BaseMeshComponent);
 }
 
-void ARogueItemChest::BeginPlay()
-{
-	Super::BeginPlay();
-	
-	SetActorTickEnabled(true);
-	
-}
+
 
 void ARogueItemChest::Tick(float DeltaTime)
 {
@@ -38,5 +34,11 @@ void ARogueItemChest::Tick(float DeltaTime)
 	{
 		SetActorTickEnabled(false);
 	}
+}
+
+void ARogueItemChest::Interact()
+{
+	//PlayAnimation
+	SetActorTickEnabled(true);
 }
 

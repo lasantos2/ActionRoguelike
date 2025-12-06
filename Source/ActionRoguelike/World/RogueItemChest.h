@@ -3,11 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Core/RogueInteractionInterface.h"
 #include "GameFramework/Actor.h"
 #include "RogueItemChest.generated.h"
 
+
 UCLASS()
-class ACTIONROGUELIKE_API ARogueItemChest : public AActor
+class ACTIONROGUELIKE_API ARogueItemChest : public AActor, public IRogueInteractionInterface
 {
 	GENERATED_BODY()
 
@@ -28,10 +30,8 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category="Animation")
 	float AnimationSpeed = 50.f;
 
-protected:
-
-	virtual void BeginPlay() override;
-
 public:
 	virtual void Tick(float DeltaTime) override;
+	
+	virtual void Interact() override;
 };
