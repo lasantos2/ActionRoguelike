@@ -22,7 +22,6 @@ ARogueItemChest::ARogueItemChest()
 }
 
 
-
 void ARogueItemChest::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -30,13 +29,14 @@ void ARogueItemChest::Tick(float DeltaTime)
 	float ClampedValue = FMath::Clamp(CurrentAnimationPitch, 0.0f, AnimationTargetPitch);
 	LidMeshComponent->SetRelativeRotation(FRotator(ClampedValue, 0.0f, 0.0f));
 	
-	if (FMath::IsNearlyEqual(ClampedValue, AnimationTargetPitch))
+	if (FMath::IsNearlyEqual(ClampedValue, AnimationTargetPitch) && IsActorTickEnabled())
 	{
 		SetActorTickEnabled(false);
+		ChestAnimationComplete();
 	}
 }
 
-void ARogueItemChest::Interact()
+void ARogueItemChest::Interact_Implementation()
 {
 	//PlayAnimation
 	SetActorTickEnabled(true);

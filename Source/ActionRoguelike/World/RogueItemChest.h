@@ -29,9 +29,12 @@ public:
 	
 	UPROPERTY(EditDefaultsOnly, Category="Animation")
 	float AnimationSpeed = 50.f;
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void ChestAnimationComplete();
 
 public:
 	virtual void Tick(float DeltaTime) override;
 	
-	virtual void Interact() override;
+	virtual void Interact_Implementation() override;
 };

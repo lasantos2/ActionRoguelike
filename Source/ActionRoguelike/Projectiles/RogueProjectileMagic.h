@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "RogueProjectile.h"
 #include "RogueProjectileMagic.generated.h"
 
 class UProjectileMovementComponent;
@@ -14,7 +14,7 @@ class UNiagaraSystem;
 class USoundBase;
 
 UCLASS(Abstract)
-class ACTIONROGUELIKE_API ARogueProjectileMagic : public AActor
+class ACTIONROGUELIKE_API ARogueProjectileMagic : public ARogueProjectile
 {
 	GENERATED_BODY()
 

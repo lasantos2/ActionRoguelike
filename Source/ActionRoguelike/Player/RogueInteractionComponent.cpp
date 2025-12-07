@@ -56,7 +56,7 @@ void URogueInteractionComponent::TickComponent(float DeltaTime, enum ELevelTick 
 		DrawDebugBox(GetWorld(), OverlapLocation, FVector(50.0f), FColor::Red);
 	}
 
-	if (BestActor)
+	if (BestActor != nullptr)
 	{
 		SelectedActor = BestActor;
 		DrawDebugBox(GetWorld(), BestActor->GetActorLocation(), FVector(60.f), FColor::Green);
@@ -66,10 +66,7 @@ void URogueInteractionComponent::TickComponent(float DeltaTime, enum ELevelTick 
 
 void URogueInteractionComponent::Interact()
 {
-	IRogueInteractionInterface* InteractInterface = Cast<IRogueInteractionInterface>(SelectedActor);	
-	if (InteractInterface)
-	{
-		InteractInterface->Interact();
-	}
-	DrawDebugBox(GetWorld(), SelectedActor->GetActorLocation(), FVector(60.0f), FColor::Green);
+
+	if (SelectedActor != nullptr)
+		IRogueInteractionInterface::Execute_Interact(SelectedActor);
 }

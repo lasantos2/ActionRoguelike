@@ -68,14 +68,20 @@ float ARogueExplosiveBarrel::TakeDamage(float DamageAmount, struct FDamageEvent 
 void ARogueExplosiveBarrel::Explode()
 {
 	bExploded = true;	
-	ActiveBurningEffectComp->Deactivate();
-	ActiveBurningSoundComp->Stop();
+	
+	if (ActiveBurningEffectComp != nullptr)
+		ActiveBurningEffectComp->Deactivate();
+	
+	if (ActiveBurningSoundComp != nullptr)
+		ActiveBurningSoundComp->Stop();
+		
+	StaticMeshComp->AddImpulse(FVector::UpVector * 1000, NAME_None, true);
+	StaticMeshComp->AddAngularImpulseInDegrees(FVector::RightVector * 1000, NAME_None, true);
 	
 	UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, ExplosionEffect, GetActorLocation());
 	UGameplayStatics::PlaySoundAtLocation(this, ExplosionSound, GetActorLocation(), FRotator::ZeroRotator);
 	
 	RadForce->FireImpulse();
-	
-	Destroy();
+
 }
 
