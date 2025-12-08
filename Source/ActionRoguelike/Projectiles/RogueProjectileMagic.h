@@ -19,17 +19,10 @@ class ACTIONROGUELIKE_API ARogueProjectileMagic : public ARogueProjectile
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditDefaultsOnly, Category="Effects")
-	TObjectPtr<UNiagaraSystem> ExplosionEffect;
 	
-	UPROPERTY(EditDefaultsOnly, Category="Effects")
-	TObjectPtr<USoundBase> ExplosionSound;
-	
-	UFUNCTION()
-	void OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+	virtual void OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp,
+	                        FVector NormalImpulse, const FHitResult& Hit) override;
 public:
-	
-	virtual void PostInitializeComponents() override;
 
 	ARogueProjectileMagic();
 

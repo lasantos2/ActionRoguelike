@@ -6,7 +6,7 @@
 #include "GameFramework/Character.h"
 #include "RougueCharacter.generated.h"
 
-class ARogueProjectileMagic;
+class ARogueProjectile;
 class UInputComponent;
 class USpringArmComponent;
 class UCameraComponent;
@@ -34,14 +34,23 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category="PrimaryAttack")
 	TObjectPtr<UNiagaraSystem> CastingEffect;
 	
+	UPROPERTY(EditDefaultsOnly, Category="SecondaryAttack")
+	TObjectPtr<UNiagaraSystem> TeleportEffect;
+	
 	UPROPERTY(EditDefaultsOnly, Category="PrimaryAttack")
 	TObjectPtr<USoundBase> CastingSound;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "PrimaryAttack")
 	TObjectPtr<UAnimMontage> AttackMontage;
 	
+	UPROPERTY(VisibleAnywhere,Category ="PrimaryAttack")
+	TSubclassOf<ARogueProjectile> ProjectileClass;
+	
 	UPROPERTY(EditDefaultsOnly, Category="PrimaryAttack")
-	TSubclassOf<ARogueProjectileMagic> ProjectileClass;
+	TSubclassOf<ARogueProjectile> PrimaryProjectileClass;
+	
+	UPROPERTY(EditDefaultsOnly, Category="SecondaryAttack")
+	TSubclassOf<ARogueProjectile> SecondaryProjectileClass;
 	
 	UPROPERTY(EditDefaultsOnly, Category="Input")
 	TObjectPtr<UInputAction> Input_Move;
@@ -55,8 +64,13 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category="Input")
 	TObjectPtr<UInputAction> Input_PrimaryAttack;
 	
+	UPROPERTY(EditDefaultsOnly, Category="Input")
+	TObjectPtr<UInputAction> Input_SecondaryAttack;
+	
+	
 	UPROPERTY(VisibleAnywhere, Category="Components")
 	TObjectPtr<UCameraComponent> CameraComp;
+	
 	UPROPERTY(VisibleAnywhere, Category="Components")
 	TObjectPtr<USpringArmComponent> SpringArmComp;
 	
@@ -66,6 +80,7 @@ protected:
 	void Move(const FInputActionValue& InValue);
 	void Look(const FInputActionInstance& InValue);
 	void PrimaryAttack();
+	void SecondaryAttack();
 	void AttackTimerElapsed();
 	void Jump();
 public:	
