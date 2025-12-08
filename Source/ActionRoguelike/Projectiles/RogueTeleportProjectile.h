@@ -19,10 +19,10 @@ protected:
 		FVector NormalImpulse, const FHitResult& Hit) override;
 	
 	UPROPERTY(EditAnywhere, Category="ProjectileSettings")
-	float TeleportAppearDelay{3.0f};
+	float TeleportAppearDelay{.2f};
 	
 	UPROPERTY(EditAnywhere, Category="ProjectileSettings")
-	float TeleportMoveDelay{3.0f};
+	float TeleportMoveDelay{.2f};
 	
 	UPROPERTY(VisibleAnywhere, Category="ProjectileSettings")
 	bool bPortalAppeared{false};
