@@ -18,41 +18,41 @@ void URogueInteractionComponent::TickComponent(float DeltaTime, enum ELevelTick 
                                                FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	
-	APlayerController *PC = CastChecked<APlayerController>(this->GetOwner());
-	
+
+	APlayerController* PC = CastChecked<APlayerController>(this->GetOwner());
+
 	FVector Center = PC->GetPawn()->GetActorLocation();
-	
+
 	ECollisionChannel CollisionChannel = COLLISION_INTERACTION;
-	
+
 	FCollisionShape Shape;
-	
+
 	Shape.SetSphere(InteractionRadius);
-	
+
 	TArray<FOverlapResult> Overlaps;
 	GetWorld()->OverlapMultiByChannel(Overlaps, Center, FQuat::Identity, CollisionChannel, Shape);
-	
-	
+
+
 	float HighestDotResult = -1.0;
-	AActor* BestActor = nullptr;	
-	
+	AActor* BestActor = nullptr;
+
 	for (FOverlapResult& Overlap : Overlaps)
 	{
 		FVector OverlapLocation = Overlap.GetActor()->GetActorLocation();
-		
+
 		FVector OverlapDirection = (OverlapLocation - Center).GetSafeNormal();
-		
+
 		float DotResult = FVector::DotProduct(OverlapDirection, PC->GetControlRotation().Vector());
-	
+
 		if (DotResult > HighestDotResult)
 		{
 			BestActor = Overlap.GetActor();
 			HighestDotResult = DotResult;
 		}
 		FString DebugString = FString::Printf(TEXT("DOT: %f"), DotResult);
-		
-		DrawDebugString(GetWorld(), OverlapLocation,  DebugString, nullptr, FColor::White, 0.0f, true);
-		
+
+		DrawDebugString(GetWorld(), OverlapLocation, DebugString, nullptr, FColor::White, 0.0f, true);
+
 		DrawDebugBox(GetWorld(), OverlapLocation, FVector(50.0f), FColor::Red);
 	}
 
@@ -66,7 +66,8 @@ void URogueInteractionComponent::TickComponent(float DeltaTime, enum ELevelTick 
 
 void URogueInteractionComponent::Interact()
 {
-
 	if (SelectedActor != nullptr)
+	{
 		IRogueInteractionInterface::Execute_Interact(SelectedActor);
+	}
 }

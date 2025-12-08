@@ -19,33 +19,32 @@ class ACTIONROGUELIKE_API ARogueProjectile : public AActor
 protected:
 	UPROPERTY(EditDefaultsOnly, Category="Effects")
 	TObjectPtr<UNiagaraSystem> ExplosionEffect;
-	
+
 	UPROPERTY(EditDefaultsOnly, Category="Effects")
 	TObjectPtr<USoundBase> ExplosionSound;
 
-	
+
 	UPROPERTY(EditDefaultsOnly, Category="Damage")
 	TSubclassOf<UDamageType> DmgTypeClass;
-	
+
 	UPROPERTY(VisibleAnywhere, Category="Components")
 	TObjectPtr<USphereComponent> SphereComp;
 
 	UPROPERTY(VisibleAnywhere, Category="Components")
 	TObjectPtr<UProjectileMovementComponent> ProjectileMovement;
-	
+
 	UPROPERTY(VisibleAnywhere, Category="Components")
-	TObjectPtr<UNiagaraComponent> LoopedNiagaraComp;	
-	
+	TObjectPtr<UNiagaraComponent> LoopedNiagaraComp;
+
 	UPROPERTY(VisibleAnywhere, Category="Components")
 	TObjectPtr<UAudioComponent> LoopedAudioComponent;
 
 	UFUNCTION()
-	virtual void OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, 
+	virtual void OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp,
 	                        FVector NormalImpulse, const FHitResult& Hit);
-	
+
 public:
-	
 	virtual void PostInitializeComponents() override;
-	
+
 	ARogueProjectile();
 };

@@ -15,20 +15,19 @@ UCLASS()
 class ACTIONROGUELIKE_API ARoguePlayerController : public APlayerController
 {
 	GENERATED_BODY()
-	
+
 protected:
-	
 	UPROPERTY(EditDefaultsOnly, Category="Components")
 	TObjectPtr<URogueInteractionComponent> InteractComp;
-	
-	
+
+
 	virtual void SetupInputComponent() override;
-	
+
 	void StartInteract();
-	
+
 	UPROPERTY(EditDefaultsOnly, Category="Input")
 	TObjectPtr<UInputAction> Input_Interact;
-	
+
 public:
 	ARoguePlayerController();
 };

@@ -13,12 +13,22 @@ ARogueTeleportProjectile::ARogueTeleportProjectile()
 {
 }
 
+void ARogueTeleportProjectile::BeginPlay()
+{
+	Super::BeginPlay();
+	GEngine->AddOnScreenDebugMessage(0, 5, FColor::Purple, FString("Spawned Teleport Projectile"), true);
+
+	// Timer to delay appearance of Portal
+	GetWorldTimerManager().SetTimer(TeleportDelayActivateTimer, this, &ARogueTeleportProjectile::TeleportAppear,
+	                                TeleportAppearDelay);
+}
+
 void ARogueTeleportProjectile::OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+                                          UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	// If hit detected, activate portal on area
 	GEngine->AddOnScreenDebugMessage(0, 5, FColor::Purple, TEXT("TeleportHit"));
-	
+
 	GetWorldTimerManager().ClearTimer(TeleportDelayActivateTimer);
 	TeleportDelayActivateTimer.Invalidate();
 	TeleportAppear();
@@ -27,20 +37,20 @@ void ARogueTeleportProjectile::OnActorHit(UPrimitiveComponent* HitComponent, AAc
 void ARogueTeleportProjectile::TeleportAppear()
 {
 	//bPortalAppeared = true;
-	
+
 	TeleportDelayActivateTimer.Invalidate();
 	GetWorldTimerManager().ClearTimer(TeleportDelayActivateTimer);
-	
+
 	ProjectileMovement->StopMovementImmediately();
-	
+
 	LoopedNiagaraComp->SetAsset(TeleportPortalEffect);
 	LoopedNiagaraComp->ActivateSystem();
 	LoopedAudioComponent->SetSound(TeleportPortalSound);
 	LoopedAudioComponent->Play();
-	
+
 	GEngine->AddOnScreenDebugMessage(0, 5, FColor::Purple, FString("TeleportAppear"));
-	
-	GetWorldTimerManager().SetTimer(MoveDelayTimer, this, &ARogueTeleportProjectile::TeleportMove,TeleportMoveDelay);
+
+	GetWorldTimerManager().SetTimer(MoveDelayTimer, this, &ARogueTeleportProjectile::TeleportMove, TeleportMoveDelay);
 }
 
 void ARogueTeleportProjectile::TeleportMove()
@@ -51,25 +61,13 @@ void ARogueTeleportProjectile::TeleportMove()
 	{
 		return;
 	}
-	
+
 	Insti->TeleportTo(GetActorLocation(), FRotator::ZeroRotator);
 	MoveDelayTimer.Invalidate();
 	GetWorldTimerManager().ClearTimer(MoveDelayTimer);
-	
+
 	UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, TeleportExplodeEffect, GetActorLocation());
-	
+
 	UGameplayStatics::PlaySoundAtLocation(this, TeleportExplodeSound, GetActorLocation(), FRotator::ZeroRotator);
 	Destroy(true);
-	
 }
-
-void ARogueTeleportProjectile::BeginPlay()
-{
-	Super::BeginPlay();
-	GEngine->AddOnScreenDebugMessage(0, 5, FColor::Purple, FString("Spawned Teleport Projectile"), true);
-	
-	// Timer to delay appearance of Portal
-	GetWorldTimerManager().SetTimer(TeleportDelayActivateTimer, this, &ARogueTeleportProjectile::TeleportAppear, TeleportAppearDelay);
-	
-}
-

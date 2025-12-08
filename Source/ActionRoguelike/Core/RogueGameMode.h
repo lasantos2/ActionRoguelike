@@ -13,6 +13,7 @@ UCLASS()
 class ACTIONROGUELIKE_API ARogueGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
+
 public:
 	ARogueGameMode();
 };

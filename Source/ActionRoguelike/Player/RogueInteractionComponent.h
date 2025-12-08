@@ -14,13 +14,14 @@ class ACTIONROGUELIKE_API URogueInteractionComponent : public UActorComponent
 
 public:
 	URogueInteractionComponent();
-	
+
 	void Interact();
 
 protected:
 	UPROPERTY()
 	TObjectPtr<AActor> SelectedActor;
-	
-	float InteractionRadius = 200.f ;
-	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	float InteractionRadius = 200.f;
+	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType,
+	                           FActorComponentTickFunction* ThisTickFunction) override;
 };

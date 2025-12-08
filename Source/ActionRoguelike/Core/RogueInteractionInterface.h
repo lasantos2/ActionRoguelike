@@ -24,5 +24,4 @@ class ACTIONROGUELIKE_API IRogueInteractionInterface
 public:
 	UFUNCTION(BlueprintNativeEvent)
 	void Interact();
-	
 };

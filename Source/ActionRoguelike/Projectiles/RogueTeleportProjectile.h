@@ -15,46 +15,42 @@ public:
 	ARogueTeleportProjectile();
 
 protected:
-	virtual void OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, 
-		FVector NormalImpulse, const FHitResult& Hit) override;
-	
+	virtual void OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp,
+	                        FVector NormalImpulse, const FHitResult& Hit) override;
+
 	UPROPERTY(EditAnywhere, Category="ProjectileSettings")
 	float TeleportAppearDelay{.2f};
-	
+
 	UPROPERTY(EditAnywhere, Category="ProjectileSettings")
 	float TeleportMoveDelay{.2f};
-	
+
 	UPROPERTY(VisibleAnywhere, Category="ProjectileSettings")
 	bool bPortalAppeared{false};
-	
+
 	//Actual portal effect + sound
 	UPROPERTY(EditDefaultsOnly, Category="ProjectileSettings")
 	TObjectPtr<UNiagaraSystem> TeleportPortalEffect;
-	
+
 	UPROPERTY(EditDefaultsOnly, Category="ProjectileSettings")
 	TObjectPtr<USoundBase> TeleportPortalSound;
-	
+
 	// Effect + sound before portal appears + disappears
 	UPROPERTY(EditDefaultsOnly, Category="ProjectileSettings")
 	TObjectPtr<UNiagaraSystem> TeleportExplodeEffect;
-	
+
 	UPROPERTY(EditDefaultsOnly, Category="ProjectileSettings")
 	TObjectPtr<USoundBase> TeleportExplodeSound;
-	
+
 	// When goes off should explode and create teleport portal
 	FTimerHandle TeleportDelayActivateTimer;
 	FTimerHandle MoveDelayTimer;
 
-
-	
 public:
-	
 	UFUNCTION()
 	void TeleportAppear();
-	
+
 	UFUNCTION()
 	void TeleportMove();
-	
+
 	virtual void BeginPlay() override;
-	
 };
