@@ -26,7 +26,7 @@ protected:
 	FTimerHandle BlackHoleDelayHandle;
 
 	UPROPERTY(EditDefaultsOnly, Category="Components")
-	float BlackHoleDelay{6.0f};
+	float BlackHoleDelay{5.0f};
 
 	virtual void BeginPlay() override;
 
