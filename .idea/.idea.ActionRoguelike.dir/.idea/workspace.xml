@@ -8,7 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37038b44-9930-41d6-8123-c2eaecd1f276" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/Projectiles/ARogueBlackHole.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/Projectiles/ARogueBlackHole.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ActionRoguelike.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ActionRoguelike.dir/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +17,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -237,7 +238,7 @@
       <workItem from="1764895553300" duration="162000" />
       <workItem from="1765055407781" duration="12091000" />
       <workItem from="1765094050316" duration="3107000" />
-      <workItem from="1765144708446" duration="30887000" />
+      <workItem from="1765144708446" duration="31674000" />
     </task>
     <task id="LOCAL-00001" summary="Interface work, cleaning code around.">
       <option name="closed" value="true" />
@@ -263,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765185229497</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changed to 5 second timer for black hole.">
+      <option name="closed" value="true" />
+      <created>1765185347590</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765185347590</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +285,8 @@
     <MESSAGE value="Interface work, cleaning code around." />
     <MESSAGE value="First moving common code for projectile base class." />
     <MESSAGE value="Finished the black hole project. I was able to set the radial force component to ignore Pawn by using the &quot;RemoveObjectTypeAffected&quot; function by using the EngineType &quot;ConvertToObjectType&quot; function.&#10;&#10;Proud of this one. Looks good." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished the black hole project. I was able to set the radial force component to ignore Pawn by using the &quot;RemoveObjectTypeAffected&quot; function by using the EngineType &quot;ConvertToObjectType&quot; function.&#10;&#10;Proud of this one. Looks good." />
+    <MESSAGE value="Changed to 5 second timer for black hole." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed to 5 second timer for black hole." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
