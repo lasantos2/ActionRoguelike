@@ -16,6 +16,17 @@ AARogueBlackHole::AARogueBlackHole()
 	RadForce->AddCollisionChannelToAffect(ECC_PhysicsBody);
 	RadForce->RemoveObjectTypeToAffect(UEngineTypes::ConvertToObjectType(ECC_Pawn));
 	SphereComp->SetSphereRadius(60.f);
+	
+	FCollisionResponseContainer Colls; 
+	
+	Colls.SetAllChannels(ECR_Ignore);
+	Colls.SetResponse(ECC_WorldDynamic, ECR_Overlap);
+	Colls.SetResponse(ECC_WorldStatic, ECR_Overlap);
+	Colls.SetResponse(ECC_PhysicsBody, ECR_Overlap);
+	Colls.SetResponse(ECC_Vehicle, ECR_Overlap);
+	Colls.SetResponse(ECC_Destructible, ECR_Overlap);
+	
+	SphereComp->SetCollisionResponseToChannels(Colls);
 }
 
 void AARogueBlackHole::BeginPlay()
