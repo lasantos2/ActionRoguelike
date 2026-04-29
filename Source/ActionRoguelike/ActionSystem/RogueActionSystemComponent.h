@@ -11,10 +11,16 @@ struct FRogueAttributeSet
 {
 	GENERATED_BODY()
 	FRogueAttributeSet()
-		: Health(100.0f){}
+		: HealthMax(100.0f)
+	{
+		Health = HealthMax;
+	}
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	float Health;
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	float HealthMax;
 };
 
 
