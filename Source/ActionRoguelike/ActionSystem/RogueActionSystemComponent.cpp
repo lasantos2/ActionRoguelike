@@ -14,7 +14,7 @@ void URogueActionSystemComponent::ApplyHealthChange(float InValueChange)
 	Attributes.Health += InValueChange;
 	
 	// Get defaults lets us get the default value of the attribute as set in the class. Very nice saves a variable name
-	float MaxHealth = GetDefault<URogueActionSystemComponent>()->Attributes.Health;
+	float MaxHealth = Attributes.HealthMax;
 	
 	Attributes.Health = FMath::Clamp(Attributes.Health + InValueChange, 0.0f, MaxHealth);
 	

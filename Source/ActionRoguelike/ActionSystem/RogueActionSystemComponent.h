@@ -33,7 +33,14 @@ class ACTIONROGUELIKE_API URogueActionSystemComponent : public UActorComponent
 	
 public:
 	
+	UFUNCTION(BlueprintCallable)
 	void ApplyHealthChange(float InValueChange);
+	
+	UFUNCTION(BlueprintCallable)
+	float GetAttributeHealth() {return Attributes.Health;};
+	
+	UFUNCTION(BlueprintCallable)
+	float GetAttributeHealthMax() {return Attributes.HealthMax;};
 	
 	UPROPERTY(BlueprintAssignable)
 	FOnHealthChanged OnHealthChanged;
