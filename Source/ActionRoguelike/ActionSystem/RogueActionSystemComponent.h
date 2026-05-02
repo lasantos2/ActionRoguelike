@@ -37,10 +37,13 @@ public:
 	void ApplyHealthChange(float InValueChange);
 	
 	UFUNCTION(BlueprintCallable)
-	float GetAttributeHealth() {return Attributes.Health;};
+	float GetAttributeHealth() const {return Attributes.Health;};
 	
 	UFUNCTION(BlueprintCallable)
-	float GetAttributeHealthMax() {return Attributes.HealthMax;};
+	float GetAttributeHealthMax();
+	
+	UFUNCTION(BlueprintCallable)
+	bool IsFullHeath();
 	
 	UPROPERTY(BlueprintAssignable)
 	FOnHealthChanged OnHealthChanged;

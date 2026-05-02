@@ -26,3 +26,11 @@ void URogueActionSystemComponent::ApplyHealthChange(float InValueChange)
 	UE_LOG(LogTemp, Log, TEXT("New Health: %f, Max Health: %f"), Attributes.Health, MaxHealth);
 	
 }
+
+float URogueActionSystemComponent::GetAttributeHealthMax()
+{return Attributes.HealthMax;}
+
+bool URogueActionSystemComponent::IsFullHeath()
+{
+	return Attributes.Health == Attributes.HealthMax;
+}
