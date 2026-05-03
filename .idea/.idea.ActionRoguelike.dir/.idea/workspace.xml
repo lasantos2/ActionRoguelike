@@ -8,20 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37038b44-9930-41d6-8123-c2eaecd1f276" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAICharacter.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAICharacter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAIController.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAIController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTService_CheckRangeTo.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTService_CheckRangeTo.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTTask_RangedAttack.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTTask_RangedAttack.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ActionRoguelike.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ActionRoguelike.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ParagonMinions/Characters/Minions/Down_Minions/Meshes/Minion_Lane_Core_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ParagonMinions/Characters/Minions/Down_Minions/Meshes/Minion_Lane_Core_Skeleton.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ActionRoguelike/Maps/P_OpenWorldMap/5/Q3/PLAPDMPFGL60ZEGGDRQ6X6.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ActionRoguelike/Maps/P_OpenWorldMap/5/Q3/PLAPDMPFGL60ZEGGDRQ6X6.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ActionRoguelike/Maps/P_OpenWorldMap/6/V2/DGTALEZB2K1UWXGYCG25YZ.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ActionRoguelike/Maps/P_OpenWorldMap/6/V2/DGTALEZB2K1UWXGYCG25YZ.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionRoguelike.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionRoguelike.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/AI/EQS_MoveToTarget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/AI/EQS_MoveToTarget.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/AI/MinionRangedBT.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/AI/MinionRangedBT.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ActionRoguelike/Maps/P_OpenWorldMap/D/Z5/FR1EC3TI7LP232XY92SNQS.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTService_CheckRangeTo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTService_CheckRangeTo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTService_CheckRangeTo.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTService_CheckRangeTo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTTask_RangedAttack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTTask_RangedAttack.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTTask_RangedAttack.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTTask_RangedAttack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueEnvQueryContext_TargetActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueEnvQueryContext_TargetActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueEnvQueryContext_TargetActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueEnvQueryContext_TargetActor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/RogueGameTypes.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/RogueGameTypes.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +42,15 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://3" root0="FORCE_HIGHLIGHTING" />
+    <setting file="cidr-memory-view://4" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAICharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAICharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTService_CheckRangeTo.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTService_CheckRangeTo.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTTask_RangedAttack.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTTask_RangedAttack.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueEnvQueryContext_TargetActor.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueEnvQueryContext_TargetActor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/Projectiles/ARogueBlackHole.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -104,6 +103,8 @@
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/BlueprintGraph/Private/K2Node_ConvertAsset.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Blutility/Private/EditorUtilitySubsystem.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Blutility/Public/EditorUtilitySubsystem.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/DetailCustomizations/Private/DetailCustomizations.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/DetailCustomizations/Private/EnvQueryParamInstanceCustomization.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/EditorStyle/Private/StarshipStyle.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/EnvironmentLightingViewer/Private/SEnvironmentLightingViewer.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/HierarchicalLODOutliner/Private/HLODOutliner.h" root0="FORCE_HIGHLIGHTING" />
@@ -117,6 +118,7 @@
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Public/BlueprintNamespaceUtilities.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Public/SDetailsDiff.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Public/SFilterableObjectList.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Public/SPinValueInspector.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/LevelEditor/Private/LevelEditorOutlinerSettings.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Persona/Public/AnimAssetFindReplaceNotifies.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/UnrealEd/Private/GeomFitUtils.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -131,6 +133,14 @@
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/BTService.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/BTTaskNode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/Tasks/BTTask_BlackboardBase.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/Tasks/BTTask_RunEQSQuery.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/EnvironmentQuery/Contexts/EnvQueryContext_BlueprintBase.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/EnvironmentQuery/Contexts/EnvQueryContext_Querier.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/EnvironmentQuery/EnvQueryContext.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/EnvironmentQuery/EnvQueryInstanceBlueprintWrapper.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/EnvironmentQuery/Tests/EnvQueryTest_Pathfinding.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Private/EnvironmentQuery/Contexts/EnvQueryContext_BlueprintBase.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Private/EnvironmentQuery/Tests/EnvQueryTest_Trace.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Core/Private/Windows/WindowsPlatformFile.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Core/Public/Delegates/DelegateInstancesImpl.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Core/Public/Delegates/DelegateSignatureImpl.inl" root0="FORCE_HIGHLIGHTING" />
@@ -427,7 +437,8 @@
       <workItem from="1777587327152" duration="364000" />
       <workItem from="1777594670713" duration="14410000" />
       <workItem from="1777676006310" duration="12584000" />
-      <workItem from="1777762877747" duration="12695000" />
+      <workItem from="1777762877747" duration="14240000" />
+      <workItem from="1777844962393" duration="1911000" />
     </task>
     <task id="LOCAL-00001" summary="Interface work, cleaning code around.">
       <option name="closed" value="true" />

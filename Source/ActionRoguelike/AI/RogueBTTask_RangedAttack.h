@@ -30,4 +30,6 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "AI")
 	float MaxBulletSpread = 5.0f;
 	
+	
+	URogueBTTask_RangedAttack();
 };

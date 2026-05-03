@@ -28,5 +28,6 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "AI")
 	FBlackboardKeySelector WithinRangeKey;
 	
+	URogueBTService_CheckRangeTo();
 	
 };
