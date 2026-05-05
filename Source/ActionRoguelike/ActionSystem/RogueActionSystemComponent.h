@@ -6,6 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "RogueActionSystemComponent.generated.h"
 
+class URogueAction;
 USTRUCT(BlueprintType)
 struct FRogueAttributeSet
 {
@@ -33,6 +34,8 @@ class ACTIONROGUELIKE_API URogueActionSystemComponent : public UActorComponent
 	
 public:
 	
+	void StartAction(FName InActionName);
+	
 	UFUNCTION(BlueprintCallable)
 	void ApplyHealthChange(float InValueChange);
 	
@@ -48,10 +51,21 @@ public:
 	UPROPERTY(BlueprintAssignable)
 	FOnHealthChanged OnHealthChanged;
 	
+	void GrantAction(TSubclassOf<URogueAction> NewActionClass);
+	
 protected:
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Attributes")
 	FRogueAttributeSet Attributes;
+	
+	UPROPERTY()
+	TArray<TObjectPtr<URogueAction>> Actions;
+	
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Actions")
+	TArray<TSubclassOf<URogueAction>> DefaultActions;
 public:
 	URogueActionSystemComponent();
+	
+	virtual void InitializeComponent() override;
 };

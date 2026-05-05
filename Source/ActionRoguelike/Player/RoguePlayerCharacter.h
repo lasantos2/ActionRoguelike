@@ -7,14 +7,12 @@
 #include "RoguePlayerCharacter.generated.h"
 
 class URogueActionSystemComponent;
-class ARogueProjectile;
 class UInputComponent;
 class USpringArmComponent;
 class UCameraComponent;
 class UInputAction;
 class UAnimMontage;
 class USoundBase;
-class UNiagaraSystem;
 struct FInputActionValue;
 struct FInputActionInstance;
 
@@ -28,35 +26,9 @@ public:
 	ARoguePlayerCharacter();
 
 protected:
-	UPROPERTY(VisibleAnywhere, Category="PrimaryAttack")
-	FName MuzzleSocketName;
-
-	UPROPERTY(EditDefaultsOnly, Category="PrimaryAttack")
-	TObjectPtr<UNiagaraSystem> CastingEffect;
-
-	UPROPERTY(EditDefaultsOnly, Category="SecondaryAttack")
-	TObjectPtr<UNiagaraSystem> TeleportEffect;
-
-	UPROPERTY(EditDefaultsOnly, Category="PrimaryAttack")
-	TObjectPtr<USoundBase> CastingSound;
-
-	UPROPERTY(EditDefaultsOnly, Category = "PrimaryAttack")
-	TObjectPtr<UAnimMontage> AttackMontage;
-	
 	UPROPERTY(EditDefaultsOnly, Category = "Death")
 	TObjectPtr<UAnimMontage> DeathMontage;
 	
-	UPROPERTY(VisibleAnywhere, Category ="PrimaryAttack")
-	TSubclassOf<ARogueProjectile> ProjectileClass;
-
-	UPROPERTY(EditDefaultsOnly, Category="PrimaryAttack")
-	TSubclassOf<ARogueProjectile> PrimaryProjectileClass;
-
-	UPROPERTY(EditDefaultsOnly, Category="SecondaryAttack")
-	TSubclassOf<ARogueProjectile> SecondaryProjectileClass;
-
-	UPROPERTY(EditDefaultsOnly, Category="SpecialAttack")
-	TSubclassOf<ARogueProjectile> SpecialProjectileClass;
 
 	UPROPERTY(EditDefaultsOnly, Category="Input")
 	TObjectPtr<UInputAction> Input_Move;
@@ -90,10 +62,8 @@ protected:
 
 	void Move(const FInputActionValue& InValue);
 	void Look(const FInputActionInstance& InValue);
-	void PrimaryAttack();
-	void SecondaryAttack();
-	void SpecialAttack();
-	void AttackTimerElapsed();
+	
+	void StartAction(FName InActionName);
 	virtual void Jump() override;
 
 	UFUNCTION()
