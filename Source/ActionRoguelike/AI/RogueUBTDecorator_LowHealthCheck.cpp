@@ -4,11 +4,23 @@
 #include "RogueUBTDecorator_LowHealthCheck.h"
 
 #include "AIController.h"
+#include "ActionSystem/RogueActionSystemComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
 
-bool URogueUBTDecorator_LowHealthCheck::PerformConditionCheckAI(AAIController* OwnerController, APawn* ControlledPawn)
+bool URogueUBTDecorator_LowHealthCheck::CalculateRawConditionValue(UBehaviorTreeComponent& OwnerComp,
+	uint8* NodeMemory) const
 {
-	UBlackboardComponent* bbc = OwnerController->GetBlackboardComponent();
 	
-	return bbc->GetValueAsBool(IsBelowHealthKey.SelectedKeyName);
+	APawn* Pawn = OwnerComp.GetAIOwner()->GetPawn();
+	
+	check(Pawn);
+	
+	URogueActionSystemComponent* ActionComp = Pawn->GetComponentByClass<URogueActionSystemComponent>();
+	
+	if (ensure(ActionComp))
+	{
+		//is low health?
+		return (ActionComp->GetAttributeHealth() / ActionComp->GetAttributeHealthMax()) < LowHealthPercentage;
+	}
+	return false;
 }

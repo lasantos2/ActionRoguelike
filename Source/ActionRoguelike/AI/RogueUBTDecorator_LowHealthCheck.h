@@ -15,14 +15,11 @@ class ACTIONROGUELIKE_API URogueUBTDecorator_LowHealthCheck : public UBTDecorato
 	GENERATED_BODY()
 	
 public:
-	UFUNCTION(Category = AI)
-	bool PerformConditionCheckAI(AAIController* OwnerController, APawn* ControlledPawn);
 	
 	UPROPERTY(EditAnywhere, Category = "AI")
 	float LowHealthPercentage = .3f;
 	
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "AI")
-	FBlackboardKeySelector IsBelowHealthKey;
+	virtual bool CalculateRawConditionValue(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) const override;
 	
 	
 };

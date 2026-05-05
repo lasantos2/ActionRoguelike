@@ -16,7 +16,7 @@ class ACTIONROGUELIKE_API URogueBTTask_HealSelf : public UBTTaskNode
 	
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="AI")
-	float HealthAmountToHeal;
+	float HealAmount = 100;
 	
 	
 	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
