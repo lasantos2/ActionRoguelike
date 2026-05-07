@@ -4,12 +4,21 @@
 #include "RogueAction.h"
 #include "RogueActionSystemComponent.h"
 
-void URogueAction::StartAction()
+void URogueAction::StartAction_Implementation()
 {
-	float GameTime = 0.0f;
-	
+	float GameTime = GetWorld()->GetTimeSeconds();
 	
 	UE_LOGFMT(LogTemp, Log, "Started Action {ActionName} - {WorldTime}", 
+		("ActionName",ActionName), 
+		("WorldTime", GameTime));
+}
+
+void URogueAction::StopAction_Implementation()
+{
+	
+	float GameTime = GetWorld()->GetTimeSeconds();
+	
+	UE_LOGFMT(LogTemp, Log, "Stopped Action {ActionName} - {WorldTime}", 
 		("ActionName",ActionName), 
 		("WorldTime", GameTime));
 }

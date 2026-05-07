@@ -9,7 +9,7 @@
 #include "Kismet/GameplayStatics.h"
 
 
-void UURogueAction_Teleport::StartAction()
+void UURogueAction_Teleport::StartAction_Implementation()
 {
 	
 	URogueActionSystemComponent* ActionComponent = GetOwningComponent();

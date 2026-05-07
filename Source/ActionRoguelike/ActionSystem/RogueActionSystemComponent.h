@@ -36,6 +36,8 @@ public:
 	
 	void StartAction(FName InActionName);
 	
+	void StopAction(FName InActionName);
+	
 	UFUNCTION(BlueprintCallable)
 	void ApplyHealthChange(float InValueChange);
 	

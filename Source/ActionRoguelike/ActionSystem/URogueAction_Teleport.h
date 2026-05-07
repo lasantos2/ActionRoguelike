@@ -14,5 +14,5 @@ class ACTIONROGUELIKE_API UURogueAction_Teleport : public URogueAction_Projectil
 {
 	GENERATED_BODY()
 	
-	virtual void StartAction() override;
+	virtual void StartAction_Implementation() override;
 };
