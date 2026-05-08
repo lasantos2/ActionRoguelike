@@ -50,6 +50,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Actions")
 	URogueActionSystemComponent* GetOwningComponent() const;
 	
+	UPROPERTY(EditDefaultsOnly, Category = "Actions")
+	FGameplayTagContainer GrantTags;
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Actions")
+	FGameplayTagContainer BlockedTags;
+	
 protected:
 	
 	// Game time untile actions is available again
