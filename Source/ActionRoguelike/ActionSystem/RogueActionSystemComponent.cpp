@@ -32,7 +32,11 @@ void URogueActionSystemComponent::StartAction(FName InActionName)
 	{
 		if (Action->GetActionName() == InActionName)
 		{
-			Action->StartAction();
+			if (Action->CanStart())
+			{
+				Action->StartAction();
+			}
+			
 			return;
 		}
 	}

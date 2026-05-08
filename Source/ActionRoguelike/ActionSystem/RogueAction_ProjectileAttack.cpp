@@ -23,7 +23,8 @@ TAutoConsoleVariable<bool> CVarProjectileAdjustmentDebugDrawing(TEXT("game.proje
 
 URogueAction_ProjectileAttack::URogueAction_ProjectileAttack()
 {
-	MuzzleSocketName = "Muzzle_01";
+	MuzzleSocketName = "Muzzle_01"; 
+	CooldownTime = .5f;
 }
 
 void URogueAction_ProjectileAttack::StartAction_Implementation()
@@ -46,6 +47,8 @@ void URogueAction_ProjectileAttack::StartAction_Implementation()
 	
 	
 	GetWorld()->GetTimerManager().SetTimer(AttackTimerHandle, this, &ThisClass::AttackTimerElapsed,AttackDelayTime, false);
+	
+
 }
 
 void URogueAction_ProjectileAttack::AttackTimerElapsed()
@@ -90,6 +93,8 @@ void URogueAction_ProjectileAttack::AttackTimerElapsed()
 
 	OwningChar->MoveIgnoreActorAdd(NewProjectile);
 	
+	
+	StopAction();
 	
 #if !UE_BUILD_SHIPPING	
 	
