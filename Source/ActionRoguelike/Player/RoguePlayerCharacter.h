@@ -12,6 +12,7 @@ class USpringArmComponent;
 class UCameraComponent;
 class UInputAction;
 class UAnimMontage;
+struct FGameplayTag;
 class USoundBase;
 struct FInputActionValue;
 struct FInputActionInstance;
@@ -67,8 +68,8 @@ protected:
 	void Move(const FInputActionValue& InValue);
 	void Look(const FInputActionInstance& InValue);
 	
-	void StartAction(FName InActionName);
-	void StopAction(FName InActionName);
+	void StartAction(FGameplayTag InActionName);
+	void StopAction(FGameplayTag InActionName);
 	virtual void Jump() override;
 
 	UFUNCTION()
