@@ -73,7 +73,7 @@ void ARoguePlayerCharacter::Jump()
 	Super::Jump();
 }
 
-void ARoguePlayerCharacter::OnHealthChanged(float NewHealth, float OldHealth)
+void ARoguePlayerCharacter::OnHealthChanged(FGameplayTag AttributeTag, float NewHealth, float OldHealth)
 {
 	// died
 	if (FMath::IsNearlyZero(NewHealth))
@@ -105,7 +105,7 @@ float ARoguePlayerCharacter::TakeDamage(float DamageAmount, struct FDamageEvent 
 {
 	const float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 	
-	ActionSystemComponent->ApplyHealthChange(-DamageAmount);
+	ActionSystemComponent->ApplyAttributeChange(SharedGameplayTags::Attribute_Health, -DamageAmount, Base);
 	
 	return ActualDamage;
 }
@@ -114,5 +114,6 @@ void ARoguePlayerCharacter::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
 	
-	ActionSystemComponent->OnHealthChanged.AddDynamic(this, &ARoguePlayerCharacter::OnHealthChanged);
+	FOnAttributeChanged& Event = ActionSystemComponent->GetAttributeListener(SharedGameplayTags::Attribute_Health);
+	Event.AddUObject(this, &ThisClass::OnHealthChanged);
 }

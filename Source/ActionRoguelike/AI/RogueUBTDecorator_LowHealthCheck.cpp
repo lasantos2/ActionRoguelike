@@ -19,8 +19,9 @@ bool URogueUBTDecorator_LowHealthCheck::CalculateRawConditionValue(UBehaviorTree
 	
 	if (ensure(ActionComp))
 	{
+		check(false);
 		//is low health?
-		return (ActionComp->GetAttributeHealth() / ActionComp->GetAttributeHealthMax()) < LowHealthPercentage;
+		//return (ActionComp->GetAttributeHealth() / ActionComp->GetAttributeHealthMax()) < LowHealthPercentage;
 	}
 	return false;
 }

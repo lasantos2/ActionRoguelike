@@ -3,18 +3,34 @@
 
 #include "RogueActionSystemComponent.h"
 #include "RogueAction.h"
+#include "RogueAttributeSet.h"
+#include "SharedGameplayTags.h"
+#include "Commandlets/DiffCookCommandlet.h"
 
 
 URogueActionSystemComponent::URogueActionSystemComponent()
 {
 	bWantsInitializeComponent = true;
+	
+	AttributeSetClass = URogueAttributeSet::StaticClass();
 }
 
 void URogueActionSystemComponent::InitializeComponent()
 {
 	Super::InitializeComponent();
 
-
+	Attributes = NewObject<URogueAttributeSet>(this, AttributeSetClass);
+	
+	
+	for (TFieldIterator<FStructProperty> PropIt(Attributes->GetClass()); PropIt; ++PropIt)
+	{
+		FRogueAttribute* FoundAttribute = PropIt->ContainerPtrToValuePtr<FRogueAttribute>(Attributes);
+		
+		FName AttributeTagName = FName("Attribute." + PropIt->GetName());
+		FGameplayTag AttributeTag =  FGameplayTag::RequestGameplayTag(AttributeTagName);
+		
+		CachedAttributes.Add( AttributeTag,FoundAttribute);
+	}
 
 	for (TSubclassOf<URogueAction> ActionClass : DefaultActions)
 	{
@@ -23,7 +39,12 @@ void URogueActionSystemComponent::InitializeComponent()
 			GrantAction(ActionClass);
 		}
 	}
+	
+}
 
+FOnAttributeChanged& URogueActionSystemComponent::GetAttributeListener(FGameplayTag AttributeTag)
+{
+	return AttributeListeners.FindOrAdd(AttributeTag);
 }
 
 void URogueActionSystemComponent::StartAction(FGameplayTag InActionName)
@@ -58,31 +79,46 @@ void URogueActionSystemComponent::StopAction(FGameplayTag InActionName)
 	UE_LOG(LogTemp, Warning, TEXT("No Action found with name %s"), *InActionName.ToString());
 }
 
-void URogueActionSystemComponent::ApplyHealthChange(float InValueChange)
+void URogueActionSystemComponent::ApplyAttributeChange(FGameplayTag AttributeTag, float Delta, EAttributeModifiedType ModifiedType)
 {
-	float OldHealth = Attributes.Health;
-	Attributes.Health += InValueChange;
+	FRogueAttribute* FoundAttribute = GetAttribute(AttributeTag);
 	
-	// Get defaults lets us get the default value of the attribute as set in the class. Very nice saves a variable name
-	float MaxHealth = Attributes.HealthMax;
+	check(FoundAttribute);
 	
-	Attributes.Health = FMath::Clamp(Attributes.Health + InValueChange, 0.0f, MaxHealth);
+	float OldValue = FoundAttribute->GetValue();
 	
-	if (!FMath::IsNearlyEqual(OldHealth, Attributes.Health))
+	switch (ModifiedType)
 	{
-		OnHealthChanged.Broadcast(Attributes.Health, OldHealth);
+	case Base:
+		FoundAttribute->Base += Delta;
+		break;
+	case Modifier:
+		FoundAttribute->Modifier += Delta;
+		break;
+	case OverrideBase:
+		FoundAttribute->Base = Delta;
+		break;
+	default:
+		check(false);
 	}
 	
-	UE_LOG(LogTemp, Log, TEXT("New Health: %f, Max Health: %f"), Attributes.Health, MaxHealth);
+	Attributes->PostAttributeChanged();
 	
+	FOnAttributeChanged* Event = AttributeListeners.Find(AttributeTag);
+	Event->Broadcast(AttributeTag, FoundAttribute->GetValue(), OldValue);
+	
+	UE_LOGFMT(LogTemp, Log, "Attribute: {0}, New: {1}, Old: {2}",
+		AttributeTag.ToString(),
+		FoundAttribute->GetValue(),
+		OldValue);
 }
 
-float URogueActionSystemComponent::GetAttributeHealthMax()
-{return Attributes.HealthMax;}
-
-bool URogueActionSystemComponent::IsFullHeath()
+FRogueAttribute* URogueActionSystemComponent::GetAttribute(FGameplayTag InAttributeTag) 
 {
-	return Attributes.Health == Attributes.HealthMax;
+	
+	FRogueAttribute** FoundAttribute = CachedAttributes.Find(InAttributeTag);
+	
+	return *FoundAttribute;
 }
 
 void URogueActionSystemComponent::GrantAction(TSubclassOf<URogueAction> NewActionClass)

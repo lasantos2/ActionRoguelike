@@ -7,4 +7,9 @@ namespace SharedGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG(Action_SpecialAttack, "Action.SpecialAttack");
 	UE_DEFINE_GAMEPLAY_TAG(Action_Sprint, "Action.Sprint");
 	
+	UE_DECLARE_GAMEPLAY_TAG_EXTERN(Attribute_Health);
+	UE_DECLARE_GAMEPLAY_TAG_EXTERN(Attribute_HealthMax);
+	UE_DEFINE_GAMEPLAY_TAG(Attribute_Health, "Attribute.Health");
+	UE_DEFINE_GAMEPLAY_TAG(Attribute_HealthMax, "Attribute.HealthMax");
+	
 }

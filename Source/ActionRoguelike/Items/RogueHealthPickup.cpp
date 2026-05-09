@@ -2,8 +2,11 @@
 
 
 #include "Items/RogueHealthPickup.h"
+
+#include "SharedGameplayTags.h"
 #include "Kismet/GameplayStatics.h"
 #include "ActionSystem/RogueActionSystemComponent.h"
+#include "Core/RogueGameplayStatics.h"
 
 float ARogueHealthPickup::GetHealthAmount()
 {
@@ -22,9 +25,9 @@ void ARogueHealthPickup::OnComponentBeginOverlap(UPrimitiveComponent* Overlapped
 	TObjectPtr<URogueActionSystemComponent> actionSystem = Cast<URogueActionSystemComponent>(OtherActor->GetComponentByClass(URogueActionSystemComponent::StaticClass()));
 	
 	// From Tom
-	if (ensure(actionSystem != nullptr) && !actionSystem->IsFullHeath())
+	if (ensure(actionSystem != nullptr) && !URogueGameplayStatics::IsFullHealth(actionSystem))
 	{
-		actionSystem->ApplyHealthChange(HealthAmount);
+		actionSystem->ApplyAttributeChange(SharedGameplayTags::Attribute_Health,HealthAmount, Base);
 		UGameplayStatics::PlaySoundAtLocation(this, PickupSound, GetActorLocation(), FRotator::ZeroRotator);
 		Destroy();
 	}

@@ -4,29 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
+#include "RogueAttributeSet.h"
 #include "Components/ActorComponent.h"
 #include "RogueActionSystemComponent.generated.h"
 
 class URogueAction;
-USTRUCT(BlueprintType)
-struct FRogueAttributeSet
-{
-	GENERATED_BODY()
-	FRogueAttributeSet()
-		: HealthMax(100.0f)
-	{
-		Health = HealthMax;
-	}
-	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	float Health;
-	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-	float HealthMax;
-};
-
-
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnHealthChanged, float, NewHealth, float, OldHealth);
+// TODO: Blueprint support later but for now C++ Only
+DECLARE_MULTICAST_DELEGATE_ThreeParams(FOnAttributeChanged, FGameplayTag /*AttributeTag*/, float /*NewAttributeValue*/, float /*NewAttributeValue*/);
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class ACTIONROGUELIKE_API URogueActionSystemComponent : public UActorComponent
@@ -38,21 +22,12 @@ public:
 	void StartAction(FGameplayTag InActionName);
 	
 	void StopAction(FGameplayTag InActionName);
+
+	void ApplyAttributeChange(FGameplayTag AttributeTag, float Delta, EAttributeModifiedType ModifyType);
 	
-	UFUNCTION(BlueprintCallable)
-	void ApplyHealthChange(float InValueChange);
+	FRogueAttribute* GetAttribute(FGameplayTag InAttributeTag);
 	
-	UFUNCTION(BlueprintCallable)
-	float GetAttributeHealth() const {return Attributes.Health;};
 	
-	UFUNCTION(BlueprintCallable)
-	float GetAttributeHealthMax();
-	
-	UFUNCTION(BlueprintCallable)
-	bool IsFullHeath();
-	
-	UPROPERTY(BlueprintAssignable)
-	FOnHealthChanged OnHealthChanged;
 	
 	void GrantAction(TSubclassOf<URogueAction> NewActionClass);
 	
@@ -60,17 +35,26 @@ public:
 	
 protected:
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Attributes")
-	FRogueAttributeSet Attributes;
-	
 	UPROPERTY()
 	TArray<TObjectPtr<URogueAction>> Actions;
 	
+	UPROPERTY()
+	TObjectPtr<URogueAttributeSet> Attributes;
+	
+	UPROPERTY(EditAnywhere, Category=Attributes, NoClear)
+	TSubclassOf<URogueAttributeSet> AttributeSetClass;
+	
+	TMap<FGameplayTag, FOnAttributeChanged> AttributeListeners;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Actions")
 	TArray<TSubclassOf<URogueAction>> DefaultActions;
+	
+	TMap<FGameplayTag, FRogueAttribute*> CachedAttributes;
 public:
 	URogueActionSystemComponent();
-	
+
 	virtual void InitializeComponent() override;
+	
+	FOnAttributeChanged& GetAttributeListener(FGameplayTag AttributeTag);
+	
 };

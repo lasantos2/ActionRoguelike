@@ -2,6 +2,8 @@
 
 
 #include "RogueAICharacter.h"
+
+#include "SharedGameplayTags.h"
 #include "ActionSystem/RogueActionSystemComponent.h"
 #include "GameFramework/PawnMovementComponent.h"
 
@@ -21,7 +23,7 @@ float ARogueAICharacter::TakeDamage(float DamageAmount, struct FDamageEvent cons
 {
 	const float ActualDamange =  Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 
-	ActionSystemComponent->ApplyHealthChange(-DamageAmount);
+	ActionSystemComponent->ApplyAttributeChange(SharedGameplayTags::Attribute_Health, -ActualDamange, Base);
 	
 	return ActualDamange;
 	
@@ -31,7 +33,7 @@ void ARogueAICharacter::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
 	
-	ActionSystemComponent->OnHealthChanged.AddDynamic(this, &ARogueAICharacter::OnHealthChanged);
+	//ActionSystemComponent->OnHealthChanged.AddDynamic(this, &ARogueAICharacter::OnHealthChanged);
 }
 
 void ARogueAICharacter::OnHealthChanged(float NewHealth, float OldHealth)
