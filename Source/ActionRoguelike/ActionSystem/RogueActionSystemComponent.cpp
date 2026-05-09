@@ -42,6 +42,12 @@ void URogueActionSystemComponent::InitializeComponent()
 	
 }
 
+void URogueActionSystemComponent::BeginPlay()
+{
+	Super::BeginPlay();
+	Attributes->InitializeAttributes();
+}
+
 FOnAttributeChanged& URogueActionSystemComponent::GetAttributeListener(FGameplayTag AttributeTag)
 {
 	return AttributeListeners.FindOrAdd(AttributeTag);
@@ -82,7 +88,6 @@ void URogueActionSystemComponent::StopAction(FGameplayTag InActionName)
 void URogueActionSystemComponent::ApplyAttributeChange(FGameplayTag AttributeTag, float Delta, EAttributeModifiedType ModifiedType)
 {
 	FRogueAttribute* FoundAttribute = GetAttribute(AttributeTag);
-	
 	check(FoundAttribute);
 	
 	float OldValue = FoundAttribute->GetValue();
@@ -104,8 +109,10 @@ void URogueActionSystemComponent::ApplyAttributeChange(FGameplayTag AttributeTag
 	
 	Attributes->PostAttributeChanged();
 	
-	FOnAttributeChanged* Event = AttributeListeners.Find(AttributeTag);
-	Event->Broadcast(AttributeTag, FoundAttribute->GetValue(), OldValue);
+	if (FOnAttributeChanged* Event = AttributeListeners.Find(AttributeTag))
+	{
+		Event->Broadcast(AttributeTag, FoundAttribute->GetValue(), OldValue);
+	}
 	
 	UE_LOGFMT(LogTemp, Log, "Attribute: {0}, New: {1}, Old: {2}",
 		AttributeTag.ToString(),

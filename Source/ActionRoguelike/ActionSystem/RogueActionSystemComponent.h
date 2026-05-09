@@ -23,11 +23,10 @@ public:
 	
 	void StopAction(FGameplayTag InActionName);
 
+	UFUNCTION(BlueprintCallable)
 	void ApplyAttributeChange(FGameplayTag AttributeTag, float Delta, EAttributeModifiedType ModifyType);
 	
 	FRogueAttribute* GetAttribute(FGameplayTag InAttributeTag);
-	
-	
 	
 	void GrantAction(TSubclassOf<URogueAction> NewActionClass);
 	
@@ -56,5 +55,7 @@ public:
 	virtual void InitializeComponent() override;
 	
 	FOnAttributeChanged& GetAttributeListener(FGameplayTag AttributeTag);
+	
+	virtual void BeginPlay() override;
 	
 };

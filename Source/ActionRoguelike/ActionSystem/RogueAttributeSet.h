@@ -6,7 +6,9 @@
 #include "UObject/Object.h"
 #include "RogueAttributeSet.generated.h"
 
-UENUM()
+class URogueActionSystemComponent;
+
+UENUM(BlueprintType)
 enum EAttributeModifiedType
 {
 	Base,
@@ -45,8 +47,13 @@ class ACTIONROGUELIKE_API URogueAttributeSet : public UObject
 {
 	GENERATED_BODY()
 	
+	
 public:
+	virtual void InitializeAttributes() {};
+	
 	virtual void PostAttributeChanged() {};
+	
+	URogueActionSystemComponent* GetOwningComponent() const;
 };
 
 UCLASS()
@@ -66,3 +73,43 @@ public:
 	URogueHealthAttributeSet();
 };
 
+
+
+UCLASS()
+class URoguePawnAttributeSet : public URogueHealthAttributeSet 
+{
+	GENERATED_BODY()
+
+public:
+
+	// Walking speed linked to movement component
+	UPROPERTY(EditAnywhere, Category = Attributes)
+	FRogueAttribute MoveSpeed;
+	
+	
+	virtual void PostAttributeChanged() override; 
+	
+	virtual void InitializeAttributes() override;
+	
+	void ApplyMoveSpeed();
+	
+	URoguePawnAttributeSet();
+
+};
+
+UCLASS()
+class URoguePlayerAttributeSet : public URoguePawnAttributeSet
+{
+	GENERATED_BODY()
+
+public:
+};
+
+UCLASS()
+class URogueMonsterAttributeSet : public URoguePawnAttributeSet
+{
+	GENERATED_BODY()
+
+public:
+	URogueMonsterAttributeSet();
+};
