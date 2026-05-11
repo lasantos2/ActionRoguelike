@@ -25,6 +25,7 @@ struct FRogueAttribute
 	FRogueAttribute(){};
 	
 	FRogueAttribute(float InBase): Base(InBase){}
+	FRogueAttribute(float InBase, float InModifier): Base(InBase), Modifier(InModifier){}
 	
 	UPROPERTY(EditAnywhere)
 	float Base = 0.0f;
@@ -86,6 +87,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = Attributes)
 	FRogueAttribute MoveSpeed;
 	
+	UPROPERTY(EditAnywhere, Category = Attributes)
+	FRogueAttribute MoveSpeedMax;
+	
 	
 	virtual void PostAttributeChanged() override; 
 	
@@ -103,6 +107,20 @@ class URoguePlayerAttributeSet : public URoguePawnAttributeSet
 	GENERATED_BODY()
 
 public:
+	
+	UPROPERTY(EditAnywhere, Category = Attributes)
+	FRogueAttribute Rage;
+	
+	UPROPERTY(EditAnywhere, Category = Attributes)
+	FRogueAttribute RageMax;
+	
+	
+	
+	virtual void PostAttributeChanged() override; 
+	
+	virtual void InitializeAttributes() override;
+	
+	URoguePlayerAttributeSet();
 };
 
 UCLASS()

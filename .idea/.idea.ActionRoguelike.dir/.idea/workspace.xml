@@ -9,15 +9,19 @@
   <component name="ChangeListManager">
     <list default="true" id="37038b44-9930-41d6-8123-c2eaecd1f276" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ActionRoguelike.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ActionRoguelike.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/AI/BP_MinionRanged.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/AI/BP_MinionRanged.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_Sprint.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_Sprint.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_BlackHole.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_BlackHole.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_MagicProjectile.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_MagicProjectile.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/BP_HUD.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/BP_HUD.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/BP_PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ActionRoguelike/Maps/P_OpenWorldMap/6/MW/SDMF3AZ5YETD43ORJ8YRUD.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ActionRoguelike/Maps/P_OpenWorldMap/6/MW/SDMF3AZ5YETD43ORJ8YRUD.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/UI/WB_PlayerHealth.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/UI/WB_PlayerHealth.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAttributeSet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAttributeSet.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAttributeSet.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAttributeSet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/Player/RoguePlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/Player/RoguePlayerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/Player/RoguePlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/Player/RoguePlayerCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/SharedGameplayTags.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/SharedGameplayTags.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/SharedGameplayTags.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/SharedGameplayTags.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +45,6 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://0" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAICharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAICharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTService_CheckRangeTo.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -472,7 +475,9 @@
       <workItem from="1778193408148" duration="21731000" />
       <workItem from="1778281538839" duration="9850000" />
       <workItem from="1778306471285" duration="8671000" />
-      <workItem from="1778362943333" duration="3379000" />
+      <workItem from="1778362943333" duration="5398000" />
+      <workItem from="1778379341468" duration="7380000" />
+      <workItem from="1778441661678" duration="5897000" />
     </task>
     <task id="LOCAL-00001" summary="Interface work, cleaning code around.">
       <option name="closed" value="true" />
@@ -674,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778318034897</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Move speed attribute and alot of code to make attributes more versatile in action system.">
+      <option name="closed" value="true" />
+      <created>1778367088664</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1778367088664</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -684,7 +697,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Interface work, cleaning code around." />
     <MESSAGE value="First moving common code for projectile base class." />
     <MESSAGE value="Finished the black hole project. I was able to set the radial force component to ignore Pawn by using the &quot;RemoveObjectTypeAffected&quot; function by using the EngineType &quot;ConvertToObjectType&quot; function.&#10;&#10;Proud of this one. Looks good." />
     <MESSAGE value="Changed to 5 second timer for black hole." />
@@ -709,7 +721,8 @@
     <MESSAGE value="tag ini" />
     <MESSAGE value="Applying tags" />
     <MESSAGE value="Learned about making our own binding using UObject in order to make new event listeners which we used to update health this time with the rogueaction system gameplay tags that have been set up." />
-    <option name="LAST_COMMIT_MESSAGE" value="Learned about making our own binding using UObject in order to make new event listeners which we used to update health this time with the rogueaction system gameplay tags that have been set up." />
+    <MESSAGE value="Move speed attribute and alot of code to make attributes more versatile in action system." />
+    <option name="LAST_COMMIT_MESSAGE" value="Move speed attribute and alot of code to make attributes more versatile in action system." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
