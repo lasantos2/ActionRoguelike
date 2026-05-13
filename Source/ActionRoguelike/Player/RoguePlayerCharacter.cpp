@@ -33,7 +33,7 @@ ARoguePlayerCharacter::ARoguePlayerCharacter()
 	GetCapsuleComponent()->SetCollisionObjectType(ROGUE_PLAYER);
 	ActionSystemComponent = CreateDefaultSubobject<URogueActionSystemComponent>(TEXT("ActionSystemComp"));
 	
-	
+	ActionSystemComponent->SetDefaultAttributeSet(URoguePlayerAttributeSet::StaticClass());
 	
 
 }

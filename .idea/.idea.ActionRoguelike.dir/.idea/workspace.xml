@@ -15,16 +15,10 @@
   <component name="ChangeListManager">
     <list default="true" id="37038b44-9930-41d6-8123-c2eaecd1f276" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ActionRoguelike.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ActionRoguelike.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_BlackHole.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_BlackHole.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_Sprint.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_Sprint.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAction.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAction.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAction.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAction.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAICharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAICharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAttributeSet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAttributeSet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAttributeSet.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAttributeSet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/Player/RoguePlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/Player/RoguePlayerCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/SharedGameplayTags.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/SharedGameplayTags.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +42,6 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://4" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAICharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAICharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTService_CheckRangeTo.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -235,32 +228,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Uproject.ActionRoguelike.executor": "Debug",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Uproject.ActionRoguelike.executor&quot;: &quot;Run&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ActionRoguelike" type="Uproject" factoryName="rider.uproject">
       <configuration_1 setup="1">
@@ -488,7 +481,8 @@
       <workItem from="1778441661678" duration="6049000" />
       <workItem from="1778486940958" duration="609000" />
       <workItem from="1778557617553" duration="605000" />
-      <workItem from="1778630024242" duration="5106000" />
+      <workItem from="1778630024242" duration="5779000" />
+      <workItem from="1778660221462" duration="2299000" />
     </task>
     <task id="LOCAL-00001" summary="Interface work, cleaning code around.">
       <option name="closed" value="true" />
@@ -706,7 +700,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778465551701</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Rage attribute and walkspeed mofier and rage increase in player take damage event.">
+      <option name="closed" value="true" />
+      <created>1778638676630</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1778638676630</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -716,7 +718,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Finished the black hole project. I was able to set the radial force component to ignore Pawn by using the &quot;RemoveObjectTypeAffected&quot; function by using the EngineType &quot;ConvertToObjectType&quot; function.&#10;&#10;Proud of this one. Looks good." />
     <MESSAGE value="Changed to 5 second timer for black hole." />
     <MESSAGE value="HUD and ActionSystemComponent changes to broadcast to death event." />
     <MESSAGE value="Fixing black hole default responsed" />
@@ -741,7 +742,8 @@
     <MESSAGE value="Learned about making our own binding using UObject in order to make new event listeners which we used to update health this time with the rogueaction system gameplay tags that have been set up." />
     <MESSAGE value="Move speed attribute and alot of code to make attributes more versatile in action system." />
     <MESSAGE value="Tried doing the assignemnt will go over solution tomorrow." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried doing the assignemnt will go over solution tomorrow." />
+    <MESSAGE value="Rage attribute and walkspeed mofier and rage increase in player take damage event." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rage attribute and walkspeed mofier and rage increase in player take damage event." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
