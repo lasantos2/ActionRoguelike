@@ -70,11 +70,11 @@ protected:
 	
 	void StartAction(FGameplayTag InActionName);
 	void StopAction(FGameplayTag InActionName);
-	virtual void Jump() override;
 
 	void OnHealthChanged(FGameplayTag AttributeTag, float NewHealth, float OldHealth);
 public:
 
+	virtual void Jump() override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	
 	UFUNCTION(Blueprintable)

@@ -56,6 +56,9 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Actions")
 	FGameplayTagContainer BlockedTags;
 	
+	UPROPERTY(EditDefaultsOnly, Category = Actions)
+	TMap<FGameplayTag, float> ActivationCost;
+	
 protected:
 	
 	// Game time untile actions is available again

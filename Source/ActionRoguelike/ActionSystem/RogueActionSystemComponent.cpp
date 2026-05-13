@@ -167,6 +167,7 @@ FRogueAttribute* URogueActionSystemComponent::GetAttribute(FGameplayTag InAttrib
 {
 	
 	FRogueAttribute** FoundAttribute = CachedAttributes.Find(InAttributeTag);
+	ensure(FoundAttribute);
 	
 	return *FoundAttribute;
 }

@@ -25,7 +25,8 @@ URogueHealthAttributeSet::URogueHealthAttributeSet()
 
 URoguePawnAttributeSet::URoguePawnAttributeSet()
 {
-	MoveSpeed = FRogueAttribute(550, 1.0f);
+	MoveSpeed = FRogueAttribute(550);
+	MoveSpeedMultiplier = FRogueAttribute(1.0f);
 }
 
 void URoguePlayerAttributeSet::PostAttributeChanged()
@@ -40,8 +41,6 @@ void URoguePlayerAttributeSet::InitializeAttributes()
 
 URoguePlayerAttributeSet::URoguePlayerAttributeSet()
 {
-	Rage =  FRogueAttribute(0);
-	RageMax = FRogueAttribute(100);
 }
 
 void URoguePawnAttributeSet::PostAttributeChanged()
@@ -61,7 +60,7 @@ void URoguePawnAttributeSet::InitializeAttributes()
 void URoguePawnAttributeSet::ApplyMoveSpeed()
 {
 	ACharacter* OwningCharacter = Cast<ACharacter>(GetOwningComponent()->GetOwner());
-	OwningCharacter->GetCharacterMovement()->MaxWalkSpeed = MoveSpeed.Base + (MoveSpeed.Base * MoveSpeed.Modifier);
+	OwningCharacter->GetCharacterMovement()->MaxWalkSpeed = MoveSpeed.GetValue() * MoveSpeedMultiplier.GetValue(); 
 }
 
 URogueMonsterAttributeSet::URogueMonsterAttributeSet()

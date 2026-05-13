@@ -88,8 +88,7 @@ public:
 	FRogueAttribute MoveSpeed;
 	
 	UPROPERTY(EditAnywhere, Category = Attributes)
-	FRogueAttribute MoveSpeedMax;
-	
+	FRogueAttribute MoveSpeedMultiplier;
 	
 	virtual void PostAttributeChanged() override; 
 	
@@ -108,17 +107,12 @@ class URoguePlayerAttributeSet : public URoguePawnAttributeSet
 
 public:
 	
-	UPROPERTY(EditAnywhere, Category = Attributes)
-	FRogueAttribute Rage;
-	
-	UPROPERTY(EditAnywhere, Category = Attributes)
-	FRogueAttribute RageMax;
-	
-	
-	
 	virtual void PostAttributeChanged() override; 
 	
 	virtual void InitializeAttributes() override;
+	
+	UPROPERTY(EditAnywhere, Category = Attributes)
+	FRogueAttribute Rage;
 	
 	URoguePlayerAttributeSet();
 };

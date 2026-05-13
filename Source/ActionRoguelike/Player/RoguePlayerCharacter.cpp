@@ -32,6 +32,9 @@ ARoguePlayerCharacter::ARoguePlayerCharacter()
 	
 	GetCapsuleComponent()->SetCollisionObjectType(ROGUE_PLAYER);
 	ActionSystemComponent = CreateDefaultSubobject<URogueActionSystemComponent>(TEXT("ActionSystemComp"));
+	
+	
+	
 
 }
 
@@ -75,6 +78,8 @@ void ARoguePlayerCharacter::Jump()
 
 void ARoguePlayerCharacter::OnHealthChanged(FGameplayTag AttributeTag, float NewHealth, float OldHealth)
 {
+	float Damage = NewHealth - OldHealth;
+	
 	// died
 	if (FMath::IsNearlyZero(NewHealth))
 	{
@@ -106,7 +111,10 @@ float ARoguePlayerCharacter::TakeDamage(float DamageAmount, struct FDamageEvent 
 	const float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 	
 	ActionSystemComponent->ApplyAttributeChange(SharedGameplayTags::Attribute_Health, -DamageAmount, Base);
-	//ActionSystemComponent->ApplyAttributeChange(SharedGameplayTags::Attribute_Rage, RageAmount, Base);
+	
+	const float RageToAdd = DamageAmount * 0.75f;
+	
+	ActionSystemComponent->ApplyAttributeChange(SharedGameplayTags::Attribute_Rage, RageToAdd, Modifier);
 	
 	return ActualDamage;
 }
