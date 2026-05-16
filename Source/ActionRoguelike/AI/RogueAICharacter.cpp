@@ -22,26 +22,21 @@ float ARogueAICharacter::TakeDamage(float DamageAmount, struct FDamageEvent cons
 
 	ActionSystemComponent->ApplyAttributeChange(SharedGameplayTags::Attribute_Health, -ActualDamange, Base);
 	
+	//GetMesh()->SetScalarParameterValueOnMaterials("TimeToHit", GetWorld()->TimeSeconds);
+	
+	GetMesh()->SetOverlayMaterialMaxDrawDistance(0);
+	
+	GetMesh()->SetCustomPrimitiveDataFloat(0, GetWorld()->TimeSeconds);
+	
+	//Handle for timer
+	GetWorldTimerManager().SetTimer(OverlayTimerHandle, [this]()
+	{
+		GetMesh()->SetOverlayMaterialMaxDrawDistance(1);
+	},
+	1.0f, false
+	);
+	
+	
 	return ActualDamange;
 	
 }
-
-void ARogueAICharacter::PostInitializeComponents()
-{
-	Super::PostInitializeComponents();
-	
-	//ActionSystemComponent->OnHealthChanged.AddDynamic(this, &ARogueAICharacter::OnHealthChanged);
-}
-
-void ARogueAICharacter::OnHealthChanged(float NewHealth, float OldHealth)
-{
-	if (FMath::IsNearlyZero(NewHealth))
-	{
-		DisableInput(nullptr);
-		GetMovementComponent()->StopMovementImmediately();
-		PlayAnimMontage(DeathMontage);
-	}
-
-}
-
-

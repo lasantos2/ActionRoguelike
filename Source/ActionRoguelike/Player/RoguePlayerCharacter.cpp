@@ -116,12 +116,27 @@ float ARoguePlayerCharacter::TakeDamage(float DamageAmount, struct FDamageEvent 
 	
 	ActionSystemComponent->ApplyAttributeChange(SharedGameplayTags::Attribute_Rage, RageToAdd, Modifier);
 	
+	GetMesh()->SetOverlayMaterialMaxDrawDistance(0);
+	
+	GetMesh()->SetCustomPrimitiveDataFloat(0, GetWorld()->TimeSeconds);
+	
+	//Handle for timer
+	GetWorldTimerManager().SetTimer(OverlayTimerHandle, [this]()
+	{
+		
+		GetMesh()->SetOverlayMaterialMaxDrawDistance(1);
+	},
+	1.0f, false
+	);
+	
 	return ActualDamage;
 }
 
 void ARoguePlayerCharacter::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
+	
+	GetMesh()->SetOverlayMaterialMaxDrawDistance(1);
 	
 	FOnAttributeChanged& Event = ActionSystemComponent->GetAttributeListener(SharedGameplayTags::Attribute_Health);
 	Event.AddUObject(this, &ThisClass::OnHealthChanged);
