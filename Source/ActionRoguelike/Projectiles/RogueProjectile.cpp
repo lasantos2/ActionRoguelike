@@ -28,6 +28,8 @@ ARogueProjectile::ARogueProjectile()
 
 	ProjectileMovement->InitialSpeed = 2000.0f;
 	ProjectileMovement->ProjectileGravityScale = 0.0f;
+	
+	InitialLifeSpan = 30.0f;
 }
 
 void ARogueProjectile::OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp,

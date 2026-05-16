@@ -2,6 +2,8 @@
 
 
 #include "RogueActionSystemComponent.h"
+
+#include "ActionRoguelike.h"
 #include "RogueAction.h"
 #include "RogueAttributeSet.h"
 #include "SharedGameplayTags.h"
@@ -20,7 +22,7 @@ void URogueActionSystemComponent::InitializeComponent()
 	if (Attributes == nullptr)
 	{
 		Attributes = NewObject<URogueAttributeSet>(this, URogueAttributeSet::StaticClass());
-		UE_LOG(LogTemp, Warning, TEXT("No default AttributeSet defined. Set using SetDefaultAttributeSet() "
+		UE_LOG(LogGame, Warning, TEXT("No default AttributeSet defined. Set using SetDefaultAttributeSet() "
 			"during Actor Construction or assign in blueprint action component for %s."), *GetNameSafe(GetOwner()));
 	}
 	
@@ -69,7 +71,7 @@ void URogueActionSystemComponent::RemoveDynamicAttributeListener(FOnAttributeDyn
 	{
 		if (Listener.Value.RemoveSingle(Event))
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Successfully removed blueprint binding"));
+			UE_LOG(LogGame, Warning, TEXT("Successfully removed blueprint binding"));
 			break;
 		}
 	}
@@ -90,7 +92,7 @@ void URogueActionSystemComponent::StartAction(FGameplayTag InActionName)
 		}
 	}
 	
-	UE_LOG(LogTemp, Warning, TEXT("No Action found with name %s"), *InActionName.ToString());
+	UE_LOG(LogGame, Warning, TEXT("No Action found with name %s"), *InActionName.ToString());
 }
 
 void URogueActionSystemComponent::StopAction(FGameplayTag InActionName)
@@ -106,7 +108,7 @@ void URogueActionSystemComponent::StopAction(FGameplayTag InActionName)
 		}
 	}
 	
-	UE_LOG(LogTemp, Warning, TEXT("No Action found with name %s"), *InActionName.ToString());
+	UE_LOG(LogGame, Warning, TEXT("No Action found with name %s"), *InActionName.ToString());
 }
 
 void URogueActionSystemComponent::ApplyAttributeChange(FGameplayTag AttributeTag, float Delta, EAttributeModifiedType ModifiedType)
@@ -150,12 +152,12 @@ void URogueActionSystemComponent::ApplyAttributeChange(FGameplayTag AttributeTag
 			if (!bIsBound)
 			{
 				Events->RemoveAt(i);
-				UE_LOG(LogTemp, Log, TEXT("Cleaned up expired attribute delegate for %s"), *GetNameSafe(GetOwner()));
+				UE_LOG(LogGame, Log, TEXT("Cleaned up expired attribute delegate for %s"), *GetNameSafe(GetOwner()));
 			}
 		}
 	}
 
-	UE_LOGFMT(LogTemp, Log, "Attribute: {0}, New: {1}, Old: {2}",
+	UE_LOGFMT(LogGame, Log, "Attribute: {0}, New: {1}, Old: {2}",
 		AttributeTag.ToString(),
 		FoundAttribute->GetValue(),
 		OldValue);

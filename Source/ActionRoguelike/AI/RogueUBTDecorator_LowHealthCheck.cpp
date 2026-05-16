@@ -4,6 +4,7 @@
 #include "RogueUBTDecorator_LowHealthCheck.h"
 
 #include "AIController.h"
+#include "SharedGameplayTags.h"
 #include "ActionSystem/RogueActionSystemComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
 
@@ -19,9 +20,13 @@ bool URogueUBTDecorator_LowHealthCheck::CalculateRawConditionValue(UBehaviorTree
 	
 	if (ensure(ActionComp))
 	{
-	check(false);
 		//is low health?
-		//return (ActionComp->GetAttributeHealth() / ActionComp->GetAttributeHealthMax()) < LowHealthPercentage;
+		
+		float HealthFraction = ActionComp->GetAttributeValue(SharedGameplayTags::Attribute_Health) / 
+			ActionComp->GetAttributeValue(SharedGameplayTags::Attribute_HealthMax);
+		
+		return HealthFraction < LowHealthPercentage;
 	}
+	
 	return false;
 }

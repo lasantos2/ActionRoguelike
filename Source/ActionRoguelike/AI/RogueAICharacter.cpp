@@ -40,3 +40,10 @@ float ARogueAICharacter::TakeDamage(float DamageAmount, struct FDamageEvent cons
 	return ActualDamange;
 	
 }
+
+void ARogueAICharacter::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+	
+	GetMesh()->SetOverlayMaterialMaxDrawDistance(1);
+}

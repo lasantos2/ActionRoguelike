@@ -81,7 +81,7 @@ void ARoguePlayerCharacter::OnHealthChanged(FGameplayTag AttributeTag, float New
 	float Damage = NewHealth - OldHealth;
 	
 	// died
-	if (FMath::IsNearlyZero(NewHealth))
+	if (FMath::IsNearlyZero(NewHealth) && OldHealth > 0.0f)
 	{
 		DisableInput(nullptr);
 		GetMovementComponent()->StopMovementImmediately();
