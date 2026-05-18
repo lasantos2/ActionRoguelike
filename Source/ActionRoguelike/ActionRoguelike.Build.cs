@@ -12,8 +12,7 @@ public class ActionRoguelike : ModuleRules
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "Niagara" });
 		
-
-		PrivateDependencyModuleNames.AddRange(new string[] { "EnhancedInput" , "AIModule", "GameplayTags"});
+		PrivateDependencyModuleNames.AddRange(new string[] { "EnhancedInput" , "AIModule", "GameplayTags", "NavigationSystem", "DeveloperSettings"});
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
