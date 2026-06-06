@@ -12,6 +12,7 @@ namespace SharedGameplayTags
 	UE_DECLARE_GAMEPLAY_TAG_EXTERN(Attribute_Rage);
 	UE_DECLARE_GAMEPLAY_TAG_EXTERN(Attribute_MoveSpeedMult);
 	UE_DECLARE_GAMEPLAY_TAG_EXTERN(StatusEffect_Sprinting);
+	UE_DECLARE_GAMEPLAY_TAG_EXTERN(StatusEffect_Stunned);
 	
 
 	}

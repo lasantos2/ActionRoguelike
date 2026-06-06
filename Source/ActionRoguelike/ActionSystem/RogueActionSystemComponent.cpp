@@ -5,6 +5,7 @@
 
 #include "ActionRoguelike.h"
 #include "RogueAction.h"
+#include "RogueActionEffect.h"
 #include "RogueAttributeSet.h"
 #include "SharedGameplayTags.h"
 #include "Commandlets/DiffCookCommandlet.h"
@@ -75,6 +76,12 @@ void URogueActionSystemComponent::RemoveDynamicAttributeListener(FOnAttributeDyn
 			break;
 		}
 	}
+}
+
+void URogueActionSystemComponent::RemoveAction(URogueAction* ActionToRemove)
+{
+	int32 RemoveCount = Actions.RemoveSingle(ActionToRemove);
+	ensure(RemoveCount == 1);
 }
 
 void URogueActionSystemComponent::StartAction(FGameplayTag InActionName)
@@ -184,6 +191,13 @@ void URogueActionSystemComponent::GrantAction(TSubclassOf<URogueAction> NewActio
 	
 	URogueAction* NewAction = NewObject<URogueAction>(this, NewActionClass);
 	Actions.Add(NewAction);
+	
+	if (NewAction->IsA(URogueActionEffect::StaticClass()))
+	{
+		//sanity check that buff allowed to run.not handle case yet
+		ensureMsgf(NewAction->CanStart(), TEXT("Effect can not start CanStart returns FALSE. Case not handled"));
+		NewAction->StartAction();
+	}
 }
 
 void URogueActionSystemComponent::SetDefaultAttributeSet(TSubclassOf<URogueAttributeSet> AttributeSetClass)

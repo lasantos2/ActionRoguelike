@@ -34,6 +34,7 @@ public:
 	
 	FRogueAttribute* GetAttribute(FGameplayTag InAttributeTag);
 	
+	UFUNCTION(BlueprintCallable)
 	void GrantAction(TSubclassOf<URogueAction> NewActionClass);
 	
 	FGameplayTagContainer ActiveGameplayTags;
@@ -68,6 +69,8 @@ public:
 	
 	UFUNCTION(BlueprintCallable, DisplayName= "Remove Atttribute Listener", meta = (Keywords="events, delegate"))
 	void RemoveDynamicAttributeListener(FOnAttributeDynamicChanged Event);
+	
+	void RemoveAction(URogueAction* ActionToRemove);
 	
 	void SetDefaultAttributeSet(TSubclassOf<URogueAttributeSet> AttributeSetClass);
 	

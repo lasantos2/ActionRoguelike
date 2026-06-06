@@ -38,6 +38,9 @@ public:
 	UFUNCTION(BlueprintNativeEvent, Category = "Actions")
 	void StopAction();
 	
+	
+	
+	
 	float GetCooldownTimeRemaining() const
 	{
 		return FMath::Max(0.0f, CooldownUntil - GetWorld()->TimeSeconds);
@@ -58,6 +61,11 @@ public:
 	
 	UPROPERTY(EditDefaultsOnly, Category = Actions)
 	TMap<FGameplayTag, float> ActivationCost;
+	
+	virtual bool ImplementsGetWorld() const override
+	{
+		return true;
+	}
 	
 protected:
 	
