@@ -2,10 +2,11 @@
 
 
 #include "RogueAICharacter.h"
-
+#include "AIController.h"
+#include "GameFramework/CharacterMovementComponent.h"
+#include "BehaviorTree/BehaviorTreeComponent.h"
 #include "SharedGameplayTags.h"
 #include "ActionSystem/RogueActionSystemComponent.h"
-#include "GameFramework/PawnMovementComponent.h"
 
 
 // Sets default values
@@ -46,4 +47,38 @@ void ARogueAICharacter::PostInitializeComponents()
 	Super::PostInitializeComponents();
 	
 	GetMesh()->SetOverlayMaterialMaxDrawDistance(1);
+	
+	ActionSystemComponent->GameplayTagUpdated.AddDynamic(this, &ThisClass::OnGameplayTagUpdated);
+	
+}
+
+void ARogueAICharacter::OnGameplayTagUpdated(FGameplayTag UpdatedTag, int32 NewCount)
+{
+	if (UpdatedTag.MatchesTag(SharedGameplayTags::StatusEffect_Stunned))
+	{
+		const bool bWasAdded = NewCount > 0;
+		
+		EMovementMode NewMoveMode = bWasAdded ? MOVE_None : MOVE_Walking;
+		GetCharacterMovement()->SetMovementMode(NewMoveMode);
+		
+		AAIController* AIC = Cast<AAIController>(GetController());
+		
+		check(AIC);
+		UBehaviorTreeComponent* BTComp = Cast<UBehaviorTreeComponent>(AIC->GetBrainComponent());
+		check(BTComp);
+		
+		if (bWasAdded)
+		{
+			BTComp->PauseLogic("StunApplied");
+		}
+		else
+		{
+			BTComp->ResumeLogic("StunRemoved");
+		}
+		
+		if (bWasAdded)
+		{
+			PlayAnimMontage(StunnedAnimation);
+		}
+	}
 }

@@ -15,6 +15,8 @@ DECLARE_MULTICAST_DELEGATE_ThreeParams(FOnAttributeChanged, FGameplayTag /*Attri
 //Blueprint delegate
 DECLARE_DYNAMIC_DELEGATE_ThreeParams(FOnAttributeDynamicChanged,FGameplayTag,AttributeTag,float,NewAttributeValue,float, OldAttributeValue);
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnGameplayTagCountChanged, FGameplayTag, UpdatedTag, int32, NewCount);
+
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent), HideCategories=(Navigation, Cooking, Tags))
 class ACTIONROGUELIKE_API URogueActionSystemComponent : public UActorComponent
 {
@@ -37,11 +39,24 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void GrantAction(TSubclassOf<URogueAction> NewActionClass);
 	
+
+	UPROPERTY(BlueprintAssignable)
+	FOnGameplayTagCountChanged GameplayTagUpdated;
+	
+	void AppendActiveTags(FGameplayTagContainer NewTags);
+	
+	void RemoveActiveTags(FGameplayTagContainer TagsToRemove);
+
+	const FGameplayTagContainer& GetActiveTags() const
+	{
+		return ActiveGameplayTags;
+	}
+
+protected:
+	
 	FGameplayTagContainer ActiveGameplayTags;
 	
-
-	
-protected:
+	void CheckAgainstBlockedTags(const FGameplayTagContainer& NewTags);
 	
 	UPROPERTY()
 	TArray<TObjectPtr<URogueAction>> Actions;

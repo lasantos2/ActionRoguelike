@@ -18,6 +18,8 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category=Effect)
 	float Duration = 0.0f;
 	
+	
+	
 public:
 	virtual void StartAction_Implementation() override;
 	

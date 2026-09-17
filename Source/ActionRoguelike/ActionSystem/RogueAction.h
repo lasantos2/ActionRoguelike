@@ -56,9 +56,7 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Actions")
 	FGameplayTagContainer GrantTags;
 	
-	UPROPERTY(EditDefaultsOnly, Category = "Actions")
-	FGameplayTagContainer BlockedTags;
-	
+
 	UPROPERTY(EditDefaultsOnly, Category = Actions)
 	TMap<FGameplayTag, float> ActivationCost;
 	
@@ -66,8 +64,17 @@ public:
 	{
 		return true;
 	}
-	
+
+	const FGameplayTagContainer& GetBlockedTags() const
+	{
+		return BlockedTags;
+	}
+
 protected:
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Actions")
+	FGameplayTagContainer BlockedTags;
+	
 	
 	// Game time untile actions is available again
 	UPROPERTY(Transient)

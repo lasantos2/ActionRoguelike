@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "RogueAICharacter.generated.h"
 
+struct FGameplayTag;
 class URogueActionSystemComponent;
 class UAnimMontage;
 
@@ -27,6 +28,12 @@ public:
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 	
 	virtual void PostInitializeComponents() override;
+	
+	UFUNCTION()
+	void OnGameplayTagUpdated(FGameplayTag UpdatedTag, int32 NewCount);
+	
+	UPROPERTY(EditDefaultsOnly, Category=Animation)
+	TObjectPtr<UAnimMontage> StunnedAnimation;
 protected:
 	FTimerHandle OverlayTimerHandle;
 };

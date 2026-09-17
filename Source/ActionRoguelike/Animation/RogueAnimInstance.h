@@ -10,6 +10,7 @@
  * 
  */
 
+struct FGameplayTag;
 class URogueActionSystemComponent;
 UCLASS()
 class ACTIONROGUELIKE_API URogueAnimInstance : public UAnimInstance
@@ -22,7 +23,11 @@ public:
 	
 	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
 
+	virtual void NativeBeginPlay() override;
 protected:
+	
+	UFUNCTION()
+	void OnTagUpdated(FGameplayTag UpdatedTag, int32 NewCount);
 	
 	UPROPERTY(Transient, BlueprintReadOnly)
 	TObjectPtr<URogueActionSystemComponent> ActionComp;
