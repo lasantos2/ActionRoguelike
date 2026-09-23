@@ -17,4 +17,6 @@ class ACTIONROGUELIKE_API URogueGameplayStatics : public UBlueprintFunctionLibra
 	
 public:
 	static bool IsFullHealth(URogueActionSystemComponent* ActionComp);
+	UFUNCTION(BlueprintCallable, Category="Action System")
+	static bool IsAlive(AActor* ActorToCheck);
 };

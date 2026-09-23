@@ -14,21 +14,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37038b44-9930-41d6-8123-c2eaecd1f276" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/URogueActionEffect_Overwhelm.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/URogueActionEffect_Overwhelm.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/EQS/RogueEnvQueryContext_AlivePlayers.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/EQS/RogueEnvQueryContext_AlivePlayers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/GameModes/RoguePrimaryGameMode.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ActionRoguelike/GameModes/RoguePrimaryGameMode.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ActionRoguelike.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ActionRoguelike.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/ActionEffect_Stunned.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/ActionEffect_Stunned.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_BlackHole.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_BlackHole.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_MagicProjectile.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_MagicProjectile.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_Sprint.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_Sprint.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_Teleport.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/Actions/Action_Teleport.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/BP_PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ActionRoguelike/Maps/P_OpenWorldMap/9/I2/C2LEGEKYWB9D0GA7M6TQZI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ActionRoguelike/Maps/P_OpenWorldMap/9/I2/C2LEGEKYWB9D0GA7M6TQZI.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAction.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAction.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAction.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionSystemComponent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/Animation/RogueAnimInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/Animation/RogueAnimInstance.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/Animation/RogueAnimInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/Animation/RogueAnimInstance.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ActionRoguelike.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/ActionRoguelike.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/BP_HUD.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/BP_HUD.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/Core/BP_RogueGameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/Core/BP_RogueGameMode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ActionRoguelike/UI/WB_MainHUD.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ActionRoguelike/UI/WB_MainHUD.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueEnvQueryContext_TargetActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueEnvQueryContext_TargetActor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionEffect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionEffect.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionEffect.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueActionEffect.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/Core/RogueGameplayStatics.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/Core/RogueGameplayStatics.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ActionRoguelike/Core/RogueGameplayStatics.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ActionRoguelike/Core/RogueGameplayStatics.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://0" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Epic Games/UE_5.8/Engine/Source/Runtime/Engine/Public/EngineUtils.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAICharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueAICharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/AI/RogueBTService_CheckRangeTo.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -75,6 +76,8 @@
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAction_ProjectileAttack.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAttributeSet.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/RogueAttributeSet.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/URogueActionEffect_Overwhelm.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/URogueActionEffect_Overwhelm.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/URogueAction_Teleport.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/ActionSystem/URogueAction_Teleport.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/Animation/RogueAnimInstance.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -85,6 +88,10 @@
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/Core/RogueGameplayStatics.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/Development/RogueCoinTestActor.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/Development/RogueCoinTestActor.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/EQS/RogueEnvQueryContext_AlivePlayers.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/EQS/RogueEnvQueryContext_AlivePlayers.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/GameModes/RoguePrimaryGameMode.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/GameModes/RoguePrimaryGameMode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/Pickups/RogueCoinPickUpSubsystem.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/Pickups/RogueCoinPickUpSubsystem.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/Projectiles/ARogueBlackHole.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -96,150 +103,6 @@
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/RogueGameTypes.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/SharedGameplayTags.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ActionRoguelike/SharedGameplayTags.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/2D/Paper2D/Source/Paper2D/Classes/PaperCharacter.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/2D/Paper2D/Source/Paper2D/Private/PaperCharacter.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/2D/Paper2D/Source/Paper2DEditor/Private/Paper2DEditorLog.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/2D/Paper2D/Source/Paper2DEditor/Private/PaperEditorShared/SocketEditing.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/2D/Paper2D/Source/Paper2DEditor/Private/PaperFlipbookHelpers.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/2D/Paper2D/Source/Paper2DEditor/Private/TileMapEditing/EdModeTileMap.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/2D/Paper2D/Source/Paper2DEditor/Private/TileMapEditing/STileLayerList.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/2D/Paper2D/Source/Paper2DEditor/Private/TileSetEditor/SingleTileEditorViewportClient.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/2D/Paper2D/Source/Paper2DEditor/Private/TileSetEditor/TileSetEditorViewportClient.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/2D/Paper2D/Source/Paper2DEditor/Private/TileSetEditor/TileSetSelectorViewport.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Animation/ControlRig/Source/ControlRig/Private/Units/Collision/RigUnit_WorldCollision.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Animation/ControlRig/Source/ControlRig/Public/ControlRigComponent.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Animation/ControlRig/Source/ControlRig/Public/Rigs/RigHierarchy.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Animation/ControlRig/Source/ControlRig/Public/Units/Collision/RigUnit_WorldCollision.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Cameras/GameplayCameras/Source/GameplayCameras/Private/GameFramework/GameplayCameraParameterSetterComponent.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Cameras/GameplayCameras/Source/GameplayCameras/Public/GameFramework/GameplayCameraParameterSetterComponent.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Compositing/Composite/Source/Composite/Composite.Build.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Developer/Concert/ConcertSync/ConcertSyncServer/Source/ConcertSyncServer/ConcertSyncServer.Build.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Developer/OneSkyLocalizationService/Source/OneSkyLocalizationService/OneSkyLocalizationService.Build.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/EnhancedInput/Source/EnhancedInput/Private/EnhancedPlayerInput.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Experimental/AVCodecs/NVCodecs/Source/NVCodecs/NVCodecs.Build.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/FX/Niagara/Source/NiagaraEditor/Private/Widgets/NiagaraSystemEditorViewportToolbarSections.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Media/AppleProResMedia/Source/AppleProResMedia/AppleProResMedia.Build.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Media/MediaFrameworkUtilities/Source/MediaFrameworkUtilities/Public/Profile/IMediaProfileManager.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Media/MediaFrameworkUtilities/Source/MediaFrameworkUtilitiesEditor/Private/AssetEditor/MediaProfileEditor.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Media/MediaFrameworkUtilities/Source/MediaFrameworkUtilitiesEditor/Private/AssetEditor/MediaProfileEditor.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Media/MediaIOFramework/Source/MediaIOCore/Private/MediaCaptureRenderPass.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Media/MediaIOFramework/Source/MediaIOCore/Private/Shared/MediaIOCoreEncodeTime.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Media/MediaPlate/Source/MediaPlateEditor/Public/MediaPlateEditorModule.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Media/MediaPlayerEditor/Source/MediaPlayerEditor/Private/Shared/MediaSourceRenderer.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Online/OnlineSubsystemUtils/Source/OnlineSubsystemUtils/Classes/LeaderboardQueryCallbackProxy.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Online/OnlineSubsystemUtils/Source/OnlineSubsystemUtils/Public/OnlineBeaconHost.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Runtime/GeometryProcessing/Source/GeometryAlgorithms/Private/ThirdParty/GTEngine/Mathematics/GteTriangulateCDT.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Runtime/GeometryProcessing/Source/GeometryAlgorithms/Private/ThirdParty/GTEngine/Mathematics/GteTriangulateEC.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Runtime/GeometryProcessing/Source/GeometryAlgorithms/Private/ThirdParty/GTEngine/Mathematics/GteUIntegerAP32.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Plugins/Runtime/MeshModelingToolset/Source/ModelingComponents/Private/Drawing/PreviewGeometryActor.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Developer/LogVisualizer/Private/VisualLoggerCameraController.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Developer/LogVisualizer/Private/VisualLoggerCameraController.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Developer/Windows/LiveCoding/Private/External/LC_StrongTypedef.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/AIGraph/Private/AIGraphConnectionDrawingPolicy.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/BehaviorTreeEditor/Private/BehaviorTreeDebugger.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/BehaviorTreeEditor/Private/BehaviorTreeEditorModule.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/BehaviorTreeEditor/Public/BehaviorTreeEditor.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/BlueprintGraph/Private/K2Node_ConvertAsset.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Blutility/Private/EditorUtilitySubsystem.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Blutility/Public/EditorUtilitySubsystem.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/DetailCustomizations/Private/DetailCustomizations.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/DetailCustomizations/Private/EnvQueryParamInstanceCustomization.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/EditorStyle/Private/StarshipStyle.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/EnvironmentLightingViewer/Private/SEnvironmentLightingViewer.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/HierarchicalLODOutliner/Private/HLODOutliner.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Private/BlueprintActionMenuUtils.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Private/SBlueprintEditorSelectedDebugObjectWidget.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Private/SDetailsDiff.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Private/SFixupSelfContextDlg.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Private/SGraphTitleBarAddNewBookmark.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Private/SReplaceNodeReferences.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Private/SSCSEditorViewport.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Public/BlueprintEditor.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Public/BlueprintManagedListDetails.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Public/BlueprintNamespaceUtilities.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Public/ReplaceNodeReferencesHelper.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Public/SDetailsDiff.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Public/SFilterableObjectList.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Kismet/Public/SPinValueInspector.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/LevelEditor/Private/LevelEditorOutlinerSettings.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/Persona/Public/AnimAssetFindReplaceNotifies.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/UnrealEd/Classes/Builders/EditorBrushBuilder.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/UnrealEd/Private/GeomFitUtils.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/UnrealEd/Private/Lightmass/Lightmass.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/UnrealEd/Private/Lightmass/Lightmass.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/UnrealEd/Private/ShaderStatsCollector.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/UnrealEd/Private/StaticLightingSystem/StaticLightingSystem.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/UnrealEd/Private/Tools/EditorComponentSourceFactory.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/UnrealEd/Private/UnrealEdSrv.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/VREditor/Private/VREditorFloatingText.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Editor/VREditor/Private/VREditorFloatingText.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/AITypes.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/BTDecorator.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/BTService.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/BTTaskNode.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/Decorators/BTDecorator_BlueprintBase.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/Tasks/BTTask_BlackboardBase.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/Tasks/BTTask_RunEQSQuery.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/EnvironmentQuery/Contexts/EnvQueryContext_BlueprintBase.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/EnvironmentQuery/Contexts/EnvQueryContext_Querier.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/EnvironmentQuery/EnvQueryContext.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/EnvironmentQuery/EnvQueryInstanceBlueprintWrapper.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Classes/EnvironmentQuery/Tests/EnvQueryTest_Pathfinding.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Private/BehaviorTree/BTDecorator.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Private/EnvironmentQuery/Contexts/EnvQueryContext_BlueprintBase.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/AIModule/Private/EnvironmentQuery/Tests/EnvQueryTest_Trace.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Core/Private/Misc/AssertionMacros.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Core/Private/Windows/WindowsPlatformFile.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Core/Public/Delegates/DelegateInstancesImpl.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Core/Public/Delegates/DelegateSignatureImpl.inl" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Core/Public/Misc/AssertionMacros.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Core/Public/Templates/Invoke.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Core/Public/Templates/Tuple.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Core/Public/UObject/ScriptDelegates.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Core/Tests/HAL/PlatformStringTest.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/CoreUObject/Private/UObject/CoreRedirects.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/CoreUObject/Private/UObject/InstanceDataObjectUtils.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/CoreUObject/Public/Templates/SubclassOf.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/CoreUObject/Public/UObject/Object.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/CoreUObject/Public/UObject/ObjectHandle.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/CoreUObject/Public/UObject/ObjectPtr.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/CoreUObject/Public/UObject/SparseDelegate.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Classes/Components/ActorComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Classes/Components/PrimitiveComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Classes/Components/SphereComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Classes/Engine/CollisionProfile.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Classes/Engine/DamageEvents.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Classes/Engine/DirectionalLight.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Classes/Engine/EngineTypes.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Classes/Engine/SphereReflectionCapture.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Classes/Engine/World.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Classes/GameFramework/LightWeightInstanceManager.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Classes/GameFramework/PlayerController.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Private/Actor.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Private/Components/PrimitiveComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Private/DebugRenderSceneProxy.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Private/EngineTypes.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Private/GameplayStatics.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Private/LightWeightInstanceManager.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Private/Particles/ParticleEmitterInstances.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Private/PhysicsEngine/ClusterUnionComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Private/UserInterface/PlayerInput.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Private/WorldPartition/WorldPartition.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Public/Engine.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Public/EngineMinimal.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Public/KismetTraceUtils.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Public/Rendering/SkyAtmosphereCommonData.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Public/Rendering/SkyAtmosphereCommonData.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Public/Rendering/StaticLightingSystemInterface.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Public/SceneProxies/SkyAtmosphereSceneProxy.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Engine/Public/Subsystems/WorldSubsystem.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Foliage/Private/FoliageComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/GameplayTags/Private/GameplayTagsManager.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/GameplayTags/Public/NativeGameplayTags.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Net/Core/Public/Net/Core/NetToken/NetTokenExportContext.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Source/Runtime/Slate/Public/Widgets/Input/SVectorInputBox.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -257,42 +120,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Uproject.ActionRoguelike.executor&quot;: &quot;Debug&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Uproject.ActionRoguelike.executor": "Run",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "rider.unittesting.toolwindow.stripe.button.shown": "true",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="ActionRoguelike" type="Uproject" factoryName="rider.uproject">
       <configuration_1 setup="1">
         <option name="CONFIGURATION" value="DebugGame Editor" />
         <option name="PLATFORM" value="Win64" />
         <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Binaries/Win64/UnrealEditor-Win64-DebugGame.exe" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;G:\VideoGameProjects\TomLoo\ActionRoguelike\ActionRoguelike.uproject&quot;" />
+        <option name="EXECUTABLE_PATH" value="C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Win64-DebugGame.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;F:\DZK\TomLoo\ActionRoguelike\ActionRoguelike.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
-        <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../epic/UE_5.7" />
+        <option name="WORKING_DIRECTORY" value="C:/Program Files/Epic Games/UE_5.8" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="1" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
@@ -305,7 +169,7 @@
         <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Win64/ActionRoguelike-Win64-DebugGame.exe" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
-        <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../epic/UE_5.7" />
+        <option name="WORKING_DIRECTORY" value="C:/Program Files/Epic Games/UE_5.8" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="1" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
@@ -315,10 +179,10 @@
         <option name="CONFIGURATION" value="Development Editor" />
         <option name="PLATFORM" value="Win64" />
         <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/../../../epic/UE_5.7/Engine/Binaries/Win64/UnrealEditor.exe" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;G:\VideoGameProjects\TomLoo\ActionRoguelike\ActionRoguelike.uproject&quot;" />
+        <option name="EXECUTABLE_PATH" value="C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;F:\DZK\TomLoo\ActionRoguelike\ActionRoguelike.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
-        <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../epic/UE_5.7" />
+        <option name="WORKING_DIRECTORY" value="C:/Program Files/Epic Games/UE_5.8" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="1" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
@@ -331,7 +195,7 @@
         <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Win64/ActionRoguelike.exe" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
-        <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../epic/UE_5.7" />
+        <option name="WORKING_DIRECTORY" value="C:/Program Files/Epic Games/UE_5.8" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="1" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
@@ -344,7 +208,7 @@
         <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Win64/ActionRoguelike-Win64-Shipping.exe" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
-        <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../epic/UE_5.7" />
+        <option name="WORKING_DIRECTORY" value="C:/Program Files/Epic Games/UE_5.8" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="1" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
@@ -523,6 +387,8 @@
       <workItem from="1780729817430" duration="2798000" />
       <workItem from="1780785869499" duration="10732000" />
       <workItem from="1780909830604" duration="996000" />
+      <workItem from="1790065575712" duration="1130000" />
+      <workItem from="1790100084455" duration="7055000" />
     </task>
     <task id="LOCAL-00001" summary="Interface work, cleaning code around.">
       <option name="closed" value="true" />
