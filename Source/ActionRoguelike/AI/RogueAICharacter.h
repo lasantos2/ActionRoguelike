@@ -6,11 +6,12 @@
 #include "GameFramework/Character.h"
 #include "RogueAICharacter.generated.h"
 
+class URogueMonsterData;
 struct FGameplayTag;
 class URogueActionSystemComponent;
 class UAnimMontage;
 
-UCLASS()
+UCLASS(Abstract)
 class ACTIONROGUELIKE_API ARogueAICharacter : public ACharacter
 {
 	GENERATED_BODY()
@@ -34,6 +35,29 @@ public:
 	
 	UPROPERTY(EditDefaultsOnly, Category=Animation)
 	TObjectPtr<UAnimMontage> StunnedAnimation;
+	
+	virtual void BeginPlay() override;
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+
+	URogueMonsterData* GetMonsterData() const
+	{
+		return MonsterData;
+	}
+	
+	void SetMonsterData(URogueMonsterData* NewMonsterData)
+	{
+		check(MonsterData == nullptr)
+		MonsterData = NewMonsterData;
+	}
+	
+	URogueActionSystemComponent* GetActionSystemComponent() const
+	{
+		return ActionSystemComponent;
+	}
+
 protected:
 	FTimerHandle OverlayTimerHandle;
+	
+	UPROPERTY(Transient)
+	TObjectPtr<URogueMonsterData> MonsterData;
 };

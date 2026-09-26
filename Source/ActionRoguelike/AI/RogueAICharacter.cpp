@@ -7,6 +7,7 @@
 #include "BehaviorTree/BehaviorTreeComponent.h"
 #include "SharedGameplayTags.h"
 #include "ActionSystem/RogueActionSystemComponent.h"
+#include "Core/RogueGameInstance.h"
 
 
 // Sets default values
@@ -37,7 +38,7 @@ float ARogueAICharacter::TakeDamage(float DamageAmount, struct FDamageEvent cons
 	1.0f, false
 	);
 	
-	
+	// @todo: handle death later
 	return ActualDamange;
 	
 }
@@ -81,4 +82,19 @@ void ARogueAICharacter::OnGameplayTagUpdated(FGameplayTag UpdatedTag, int32 NewC
 			PlayAnimMontage(StunnedAnimation);
 		}
 	}
+}
+
+void ARogueAICharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	URogueGameInstance* GI = GetGameInstance<URogueGameInstance>();
+	check(GI);
+	GI->AliveMonsters.Add(this);
+}
+
+void ARogueAICharacter::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	Super::EndPlay(EndPlayReason);
+	URogueGameInstance* GI = GetGameInstance<URogueGameInstance>();
+	GI->AliveMonsters.RemoveSingleSwap(this, EAllowShrinking::No);
 }
